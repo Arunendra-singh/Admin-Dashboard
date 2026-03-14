@@ -1,0 +1,10 @@
+export const CDN_URL = "https://d1np627mhnpwq4.cloudfront.net";
+export const WEBSITE_GUID = "8FF00A25-B6ED-4799-9D2F-412DBA1F7C66";
+// export const WEBSITE_URL = "https://demo3beta.ewizsaas.com/";
+export const LANGUAGE_GUID = "3238bf6d-ddcb-4f65-aadb-3eee730fb9c8"; // site language guid
+// export const STATIC_IMG_DIR = CDN_URL + "/images";
+// export let USER_EMAIL = CookieDetails?.emailAddress ? CookieDetails?.emailAddress : null;
+// export let USER_GUID = CookieDetails?.userGuid ? CookieDetails?.userGuid : null;
+// export let USER_TYPE = CookieDetails?.userType ? CookieDetails?.userType : null;
+export const REACT_APP_API_ENDPOINT = "https://admin.ewizsaas.com/";
+export const CLIENT_GUID = "db2ac695-7c82-4d35-a983-c5d1445104b4";

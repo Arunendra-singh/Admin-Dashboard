@@ -1,0 +1,1427 @@
+@import "../../styles/mixins";
+
+.salesCard .search-bar .search-bar-controls .header-second .input-wrapper > input{
+}
+
+.sidebar-mini .orderReport .search-bar .search-bar-controls .header-second {
+  width: 100% !important;
+
+  & .sort_warp {
+    width: auto;
+
+    & button.sortby-dropdown-toggle.dropdown-toggle {
+      padding: 0 10px !important;
+      height: 36px;
+      top: -4px;
+      position: relative;
+      border: 1px solid #ccd3d6;
+      border-radius: 6px;
+      min-width: 120px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 9%;
+    }
+  }
+}
+
+.salesCard .search-bar .search-bar-controls .select-wrapper {
+  width: 5% !important;
+}
+.collectionCont {
+  padding-right: 24px;
+  padding-left: 6px;
+  padding-top: 10px;
+  .show.dropdown {
+    .dropdown-menu {
+      padding: 7px;
+      .dropdown-item {
+        font-weight: 500;
+        padding: 7px 12px;
+      }
+    }
+  }
+}
+
+.orderReport .search-bar-buttons .reset {
+  border: 1px solid var(--clr-primary);
+  font-weight: 600;
+}
+
+.bottom-info {
+  display: inline-block;
+  overflow-y: auto;
+}
+.body-content.row.app-main {
+  display: none;
+}
+
+.collectionCont .search-bar-controls .header-second {
+  width: 65% !important;
+}
+
+.orderCatlogReport{
+    .salesCard .search-bar .search-bar-controls .header-second {
+        width: 100% !important;
+    }
+    .salesCard .search-bar .search-bar-controls .header-second .input-wrapper {
+        width: 100%;
+        margin: 0;
+        > input{
+           padding: 10px 10px 10px 10px;
+        }
+    }
+    .reportViewPopup table th, td{
+        padding: 8px;
+        border: 1px solid #ebe7e7;
+        font-size: 14px;
+    }
+    .table-bordered tbody tr.tblRowData {cursor: default;}
+    .table-bordered thead {
+        background: transparent !important;
+    }
+
+    .all_user .table.dataTable {
+      thead td.tblTitle:nth-child(1) { width: 20% !important; }
+      thead td.tblTitle:nth-child(2) { width: 20% !important; }
+      thead td.tblTitle:nth-child(3) { width: 30% !important; }
+      thead td.tblTitle:nth-child(4) { width: 15% !important; }
+      thead td.tblTitle:nth-child(5) { width: 15% !important; }
+    }
+
+    .all_user .table.dataTable {
+      td.tblTitle.nameList.text-no-ellipsis,
+      td.tblRowtd.nameList.text-no-ellipsis{ 
+        text-align: left !important;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px){
+      .search-bar-controls .header-second .input-wrapper{
+        margin-right: 5px !important;
+      }
+    }
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 15px;
+
+  & .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+
+    & .card-icon {
+      font-size: 20px;
+    }
+
+    & .card-title {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    & .card-value {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+  }
+}
+
+.order-details-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  td {
+    padding: 10px 6px;
+    border: 1px solid #ddd;
+  }
+
+  b {
+    font-weight: bold;
+  }
+}
+
+.orderReport {
+  .search-bar-buttons button {
+    min-width: 100px;
+    padding: 4px 10px;
+  }
+
+  .cardSection {
+    .date-input-wrapper {
+      border: none;
+    }
+
+    .date-input-wrapper > input {
+      width: 49%;
+      border: 1px solid #ccd3d6;
+      border-radius: 6px;
+    }
+  }
+
+  .date-input-wrapper input[type="date"]:hover,
+  .date-input-wrapper input[type="date"]:focus {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ced4da;
+    border-radius: 6px !important;
+  }
+  .date-input-wrapper input:first-child {
+    margin-right: 10px;
+    margin-left: 5px;
+  }
+  .card-wrapper .card {
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+  .search-bar .search-bar-controls .header-second .input-wrapper > input {
+    padding: 10px !important;
+    margin-left: 20px;
+  }
+  .popup-content.reportViewPopup {
+    width: auto;
+    height: 90vh;
+    top: 0;
+    padding: 0 0;
+    overflow-y: auto;
+
+    & p.text-cap {
+      text-transform: capitalize;
+    }
+
+    & p.detail_order_no {
+      font-size: 14px;
+      font-weight: normal;
+      margin-bottom: 21px;
+      padding-top: 5px;
+    }
+
+    & .tableBody {
+      padding: 10px 15px;
+      padding-bottom: 30px;
+    }
+
+    & .order-details-table b {
+      font-weight: 500;
+    }
+  }
+
+  .popup-content .close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.5;
+  }
+
+  .popup-content.reportViewPopup::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+
+  .title-info.popup-image1 {
+    padding: 15px 20px;
+    color: #333;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .tbl_sections {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .tableData.billing_Add {
+    margin-right: 20px;
+  }
+
+  .tblbtn-icon {
+    background: transparent;
+    border: 0;
+    padding: 5px 6px;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  margin-left: 0px !important;
+}
+
+button.tblbtn-icon.duplicate_order {
+  font-size: 15px;
+}
+
+select.status-dropdown {
+  border: 1px solid #d1d1d1;
+  padding: 5px 5px;
+  border-radius: 8px;
+  width: 80%;
+}
+
+.prod_bottom_details {
+  .rightalign {
+    display: block;
+    text-align: right;
+    padding: 5px 0;
+  }
+
+  p {
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.modal-body .modalbodyHeading {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.modal-open .modal .modal-header {
+  background: #333;
+}
+
+.modal-header p.track_model_Title {
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #fff;
+  padding: 6px;
+}
+
+.modal .modal-dialog .modal-content {
+  border-radius: 0.3rem;
+}
+span.txt_red {
+  color: red;
+}
+span.txt_red.cus_mb {
+  line-height: 3;
+}
+textarea.track_textarea {
+  width: 100%;
+}
+
+button.btn.btn-track.clsSalesReport_Export {
+  background: linear-gradient(180deg, #0e97e7 0%, #0382cc 100%);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.productSect {
+  .table.dataTable .tblTitle {
+    color: #fff;
+  }
+
+  tr.txtBold td {
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+.productSect .table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-color-type: var(--bs-table-striped-color);
+  --bs-table-bg-type: inherit;
+}
+
+.usermanagement-container {
+  .all_user .table.dataTable,
+  .table-bordered tbody tr.tblRowData {
+    cursor: default;
+    .order-date {
+      cursor: default;
+    }
+  }
+
+  .table-bordered thead tr {
+    td.tblTitle:first-child, 
+    td.tblRowtd:first-child{ 
+      border-radius: 10px 0 0 10px !important; 
+    }
+  }
+
+  .table-bordered tbody tr.tblRowData {
+    height: 60px;
+  }
+  .reportPage{
+    .table.dataTable thead{
+        tr td{font-weight: 700;}
+    } 
+}
+  @media (max-width: 992px) {
+    .search-bar-buttons button {
+      padding: 4px 8px;
+      height: 36px;
+      font-size: 0.95rem;
+    }
+  }
+
+  .search-bar-buttons .reset {
+    border: 1px solid;
+  }
+
+  .search-bar-buttons button#cpContent_btnNSExport {
+    background: linear-gradient(180deg, #0e97e7 0%, #0382cc 100%);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.productSect{
+    .table.dataTable .tblTitle {
+        color: #fff;
+    }
+
+    tr.txtBold td {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+
+.productSect .table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-color-type: var(--bs-table-striped-color);
+    --bs-table-bg-type: inherit;
+}
+
+.usermanagement-container {
+  .all_user .table.dataTable {
+      thead td.tblTitle:nth-child(1){
+          width:33%;
+      }
+      td.tblTitle.nameList.text-no-ellipsis {
+          text-align: center;
+      }
+      td.tblRowtd.nameList.text-no-ellipsis {
+          text-align: center;
+      }
+  }  
+  
+  .all_user .table.dataTable,
+    .table-bordered tbody tr.tblRowData{
+        cursor: default;
+        .order-date {
+            cursor: default;
+        }
+    }
+    .reportPage{
+        .table.dataTable thead{
+            tr td{font-weight: 700;}
+        } 
+    }
+
+    .table-bordered tbody tr.tblRowData{
+        height: 60px;
+        border: 1px solid #dee2e6;
+    }
+
+    .table.dataTable thead > tr > td {
+        font-weight: 600;
+    }
+    
+    @media (max-width: 992px) {
+        .search-bar-buttons button {
+            padding: 4px 8px;
+            height: 36px;
+            font-size: 0.95rem;
+        }
+    }
+
+    .search-bar-buttons .reset {
+        border: 1px solid;
+    }
+
+    .search-bar-buttons button#cpContent_btnNSExport {
+        background: linear-gradient(180deg, #0E97E7 0%, #0382CC 100%);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+}
+ 
+// orderSampleReport page style 
+.table.table-striped.table-bordered.dataTable thead tr td {
+  background: #405660 !important;
+  color: #fff;
+}
+
+td.tblRowtd.freight span,
+td.tblRowtd.amount span {
+  text-align: left;
+}
+
+.tblTitle {
+  .order-date {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .sortIcon.ascnew,
+  .sortIcon.descnew {
+    color: #fff;
+    font-weight: bold;
+    margin-left: 1px;
+  }
+}
+
+span.sortIcon.ascnew {
+  position: relative;
+  top: -4px;
+  font-size: 11px;
+}
+
+.order-date {
+  cursor: pointer;
+}
+
+.order-details-table {
+  .viewTbl_img {
+    width: 50%;
+    height: auto;
+  }
+
+  td:first-child {
+    border-right: 0;
+    width: 35%;
+  }
+
+  td:last-child {
+    border-left: 0;
+  }
+}
+
+.table.dataTable {
+    .productImg td {
+      border: 1px solid #ddd !important;
+    }
+}
+
+.prod_bottom_details p.finalTotal {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.sort_warp {
+  margin-right: 8px;
+
+  & button.sortby-dropdown-toggle.dropdown-toggle {
+    padding: 0 10px !important;
+    height: 36px;
+    top: -4px;
+    position: relative;
+    border: 1px solid #ccd3d6;
+    border-radius: 6px;
+  }
+}
+
+.header-second {
+  .searchBox_Sect {
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+  }
+  .searchBox_Sect .proLeftSect {
+    width: 70%;
+    margin-right: 8px;
+  }
+}
+
+.sidebar-mini .salesCard.newsLetter {
+  .search-bar .search-bar-controls {
+    justify-content: flex-start;
+  }
+
+  .search-bar .search-bar-controls .header-second {
+    width: 100%;
+  }
+}
+
+td.font1rem {
+  font-size: 1rem;
+}
+
+.action.PaymentAction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button.tblbtn-icon.icon-editNew {
+    line-height: 0;
+  }
+  button.tblbtn-icon.icon-editNew:hover {
+    color: #fff !important;
+  }
+}
+.orderReport , .orderSampleReport, .contactUsReport, .orderRequestReport{
+    & .tblbtn-icon:hover {
+        background-color: #0E97E7;
+        border-radius: 50%;
+        transform: translate(2%, 0%);
+        color: #fff;
+    }
+    
+    & .tblbtn-icon:hover:after{
+        position: relative;
+        display: none;
+    }
+}
+
+.orderReport{
+    table.dataTable {
+        table-layout: fixed;
+        width: 100%;
+    }
+    .table.dataTable thead > tr > td {
+        position: relative;
+        font-weight: 700;
+        font-size: 14px;
+    }
+    .table.dataTable td.tblRowtd:nth-child(4) span {
+        width: 76px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+    }
+    
+    .table.dataTable td.tblRowtd:nth-child(4) span:hover {
+        width: 100%;
+        min-width: 120px;
+        word-break: break-all;
+        position: relative;
+        text-overflow: clip;
+        white-space: normal;
+    }
+}
+
+.popup-content.reportViewPopup {
+  width: 520px;
+}
+
+.proRgtSect .selectStatus_Report select {
+  width: 100%;
+  color: var(--clr_7);
+  font-size: 13px;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid #ccd3d6;
+  border-radius: 4px;
+  outline: none;
+  height: 36px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.salesCard .search-bar .search-bar-controls .header-second {
+  @include media-max(md) {
+    display: inline-block;
+  }
+}
+.input-wrapper.mb-2.clsSalesReport_SearchNew {
+  @include media-max(md) {
+    display: inline-block !important;
+    > input {
+      margin-bottom: 7px;
+      margin-left: 0px !important;
+    }
+  }
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.orderSampleReport,
+.orderRequestReport {
+  .date-input-wrapper input:first-child {
+    margin-right: 5px;
+  }
+
+  .search-bar .search-bar-controls .header-second {
+    justify-content: flex-start;
+  }
+
+  .date-input-wrapper.cus_wid {
+    width: 22%;
+    margin-right: 5px;
+  }
+}
+
+.contactUsReport,
+.orderRequestReport {
+  .search-bar-buttons .reset {
+    font-weight: 600;
+  }
+  .search-bar-buttons button {
+    min-width: 100px;
+  }
+  .cardSection .date-input-wrapper {
+    border: none;
+  }
+  .cardSection .date-input-wrapper > input {
+    width: 48%;
+    border: 1px solid #ccd3d6;
+    border-radius: 6px;
+  }
+  .search-bar-buttons button {
+    padding: 4px 10px;
+  }
+
+  .date-input-wrapper input:first-child {
+    margin-right: 8px;
+  }
+}
+
+.newsLetter, .contactUsReport,
+.orderSampleReport, .orderRequestReport{
+    .header-desc .navbarlinks {
+      display: block !important;
+    }
+    .header-container .tooltip .tooltiptext{
+        width: max-content !important;
+    }
+
+    @media (min-width: 375px) and ( max-width: 575px){
+      .header-second .date-input-wrapper.cus_wid input {
+          min-width: 102px;
+      }
+      .date-input-wrapper input:first-child {
+          margin-right: 5px;
+      }
+    }
+}
+
+.newsLetter, .contactUsReport, .orderRequestReport{
+  & .search-bar-buttons .reset{
+      font-weight: 600;
+  }
+  & .search-bar .search-bar-controls .header-second .input-wrapper > input{
+      padding-left: 10px !important;
+  }
+}
+ 
+.contactUsReport, .orderSampleReport, .orderRequestReport{
+  .header-second .search-bar-buttons {
+    margin-top: 0px;
+  }
+
+  .search-bar-buttons button {
+    padding: 4px 5px;
+    min-width: 80px;
+  }
+
+  .search-bar .search-bar-controls .header-second{
+    width: 100% !important;
+  }
+  & .popup-content.reportViewPopup {
+      & p.text-cap {
+          text-transform: capitalize;
+      }
+
+  & p.detail_order_no {
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 21px;
+    padding-top: 5px;
+  }
+  & .tableBody {
+    padding: 10px 15px;
+    padding-bottom: 30px;
+  }
+  }
+  .salesCard .date-input-wrapper {
+    @include media-max(md) {
+      border: none !important;
+    }
+    input {
+      @include media-max(md) {
+        border: 1px solid #ccd3d6;
+        border-radius: 5px !important;
+      }
+    }
+  }
+  .search-bar {
+    @include media-max(sm) {
+      margin-top: 116px !important;
+    }
+  }
+
+  .usermanagement-container .search-bar-buttons .reset {
+    border: 1px solid;
+  }
+
+  & .popup-content .close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.5;
+  }
+
+  & .title-info.popup-image1 {
+    padding-bottom: 15px;
+    color: #333;
+    border-radius: 12px 12px 0 0;
+  }
+
+  & .tbl_sections {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  & .tableData.billing_Add {
+    margin-right: 20px;
+  }
+
+  & .popup-content.reportViewPopup {
+    .tableBody {
+      padding: 0 0;
+      overflow-y: scroll;
+      height: calc(100vh - 150px);
+      padding-right: 15px; 
+    } 
+
+    @supports (-moz-appearance: none) {
+      .left-sidebar .Main-menubar ul.submenu,
+      .tableBody {
+        scrollbar-width: thin;
+        scrollbar-color: #078d99 #f5f5f5;
+      }
+    }
+  }
+
+  .tblbtn-icon {
+    background: transparent;
+    border: 0;
+    padding: 5px 6px;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .search-bar-controls .header-second .input-wrapper > input { margin-right: inherit; }
+}
+
+.newsLetter { 
+    .search-bar .search-bar-controls .header-second .input-wrapper,
+    .header-second .search-bar-buttons {
+        width: 30%;
+        margin-right: 10px;
+    }
+    
+    .all_user .table.dataTable {
+      thead td.tblTitle:nth-child(1) { width: 28% !important; }
+      thead td.tblTitle:nth-child(2) { width: 15% !important; }
+      thead td.tblTitle:nth-child(3) { width: 15% !important; }
+      thead td.tblTitle:nth-child(4) { width: 15% !important; }
+      thead td.tblTitle:nth-child(5) { width: 15% !important; }
+    }
+
+    @media ( max-width: 992px){
+        .search-bar .search-bar-controls .header-second .input-wrapper, 
+        .header-second .search-bar-buttons {
+            width: 36%;
+        }
+    }
+
+    @media (min-width: 460px) and ( max-width: 575px){
+        .search-bar .search-bar-controls .header-second .input-wrapper > input{
+            min-width: 100px;
+        }
+    }
+}
+
+.contactUsReport {
+  .date-input-wrapper.cus_wid {
+    width: auto;
+    max-width: 20%;
+    margin-right: 8px;
+  }
+  .date-input-wrapper input:first-child {
+    margin-right: 5px;
+  }
+  .date-input-wrapper input:last-child {
+    margin-right: 5px;
+  }
+
+  .all_user .table.dataTable {
+    thead td.tblTitle:nth-child(1) { width: 20% !important; }
+    thead td.tblTitle:nth-child(2) { width: 20% !important; }
+    thead td.tblTitle:nth-child(3) { width: 30% !important; }
+  }
+
+  @include media-max(md) {
+    .search-bar .search-bar-controls .header-second {
+      justify-content: flex-start;
+    }
+  }
+
+  @include media-max(sm) {
+    .header-second .searchBox_Sect input {
+      min-width: 100px;
+    }
+  }
+}
+
+.orderSampleReport {
+  .header-second .searchBox_Sect .proLeftSect {
+    width: 98%;
+  }
+  .proRgtSect {
+    display: none;
+  }
+
+  .search-bar-controls {
+    .header-second .input-wrapper > input {
+      padding: 10px !important;
+    }
+  }
+  .search-bar-buttons .reset {
+    font-weight: 600;
+  }
+
+  .search-bar-buttons button {
+    min-width: 100px;
+  }
+
+  .cardSection .date-input-wrapper {
+    border: none;
+  }
+
+  .cardSection .date-input-wrapper > input {
+    width: 49%;
+    border: 1px solid #ccd3d6;
+    border-radius: 6px;
+  }
+
+  .search-bar-buttons button {
+    padding: 4px 10px;
+  }
+
+  .date-input-wrapper input[type="date"]:hover,
+  .date-input-wrapper input[type="date"]:focus {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ced4da;
+    border-radius: 6px !important;
+  }
+
+  .all_user .table.dataTable {
+    thead td.tblTitle:nth-child(1) { width: 30% !important; }
+    thead td.tblTitle:nth-child(2) { width: 28% !important; }
+    thead td.tblTitle:nth-child(3) { width: 26% !important; }
+
+    thead td.tblTitle.nameList.text-no-ellipsis, {
+      text-align: left;
+    }
+    tbody td.tblRowtd.nameList.text-no-ellipsis {
+        text-align: left !important;
+    }
+  }
+}
+
+.orderRequestReport {
+    .req_quote_Cards{ display: none;}
+    .req_quote_Cards.active{display: flex;}
+
+    .tblRowtd.status select {
+        padding: 5px 4px;
+        border-radius: 6px;
+        width: auto;
+        cursor: pointer;
+    }
+    .all_user .table.dataTable thead td.tblTitle:nth-child(1) {
+      width: auto !important;
+  }
+
+  .card-wrapper::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .table.dataTable {
+    td.tblRowtd:first-child{
+      width: 100px;
+    }
+    td.tblRowtd{
+      &:nth-child(2){ width: 250px; }
+      &:nth-child(5){ width: 200px; }
+      &:nth-child(7){ width: 150px; }
+    }
+  }
+
+  @media (max-width: 1366px) {
+    .table.dataTable td.tblRowtd:nth-child(2) {
+      min-width: 250px;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 991.5px) {
+    .card-wrapper .card {
+      width: 45%;
+      float: left;
+    }
+  }
+  @media (min-width: 375px) and (max-width: 767px) {
+    .cardSection .req_quote_Cards.active{
+      display: block;
+    }
+    .card-wrapper .card {
+      margin-bottom: 10px;;
+    }
+    .table.dataTable td.tblRowtd:nth-child(2) {
+      min-width: 250px;
+    }
+  }
+  option {
+    font-family: sans-serif, Arial;
+  }
+}
+
+.header-second .date-input-wrapper.cus_wid input {
+  padding: 0 6px;
+}
+
+.icon-chevron_right {
+  @supports (-moz-appearance: none) {
+    &::before {
+      content: "\e923";
+      display: none;
+    }
+  }
+
+    @supports (-webkit-appearance: none) {
+      &::before {
+        content: "\e923";
+        display: none;
+      }
+    }
+}
+
+input[type="date"] {
+  cursor: pointer;
+}
+
+.header-container.order_sample_report,
+.header-container.request_quote_report,
+.header-container.contactus_report,
+.header-container.newsletter_report {
+    .tooltip .tooltiptext{
+        max-width: max-content;
+    }
+    .tooltip .tooltiptext::after{
+        margin-top: -3px;
+    }
+
+    @media (min-width: 375px) and (max-width: 1024px){
+      .navlinkswitch p span {
+        font-size: 10px;
+      }
+    }
+
+    @media (min-width: 375px) and (max-width: 575px){
+      .navlinkswitch p .arrowicon {
+        margin-left: 6px;
+      }
+      .navlinkswitch p span {
+        font-size: 10px;
+      }
+    }
+
+    @media (max-width: 480px){
+      
+
+      .headersec .oldNewLink{
+        padding-right: 0;
+      }
+      .navlinkswitch p span {
+        color: #667b84e0;
+      }
+    }
+}
+
+@media (min-width: 1280px) {
+  .header-second .searchBox_Sect {
+    margin-right: 8px;
+  }
+
+  .orderSampleReport .proRgtSect {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1280px) {
+  .contactUsReport
+    .search-bar
+    .search-bar-controls
+    .header-second
+    .input-wrapper {
+    margin-right: 5px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1366px) {
+  .sidebar-mini
+    .search-bar
+    .search-bar-controls
+    .header-second
+    .search-bar-buttons {
+    justify-content: left;
+  }
+
+  .contactUsReport,
+  .orderSampleReport,
+  .orderRequestReport {
+    .date-input-wrapper input:last-child {
+      margin-right: 5px;
+    }
+
+    .header-second .search-bar-buttons {
+      width: auto;
+      margin-top: 0;
+    }
+
+    .header-second .search-bar-buttons button.btn {
+      padding: 4px 5px;
+      min-width: 80px;
+    }
+  }
+
+  .header-container.order_sample_report,
+  .header-container.request_quote_report,
+  .header-container.contactus_report,
+  .header-container.newsletter_report{
+     .tooltip .tooltiptext{
+        width: max-content;
+        left: -10px;
+      }
+
+      @media (min-width: 1025px) and (max-width: 1366px) {
+        .tooltip .tooltiptext {
+          left: 25px;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 1024px) {
+        .tooltip .tooltiptext::after {
+          content: " ";
+          position: absolute;
+          top: -15px;
+          left: 5%;
+          right: 100%;
+          transform: rotate(90deg)
+        }
+      }
+  }
+}
+
+@media (min-width: 992px){
+  .contactUsReport,
+  .orderSampleReport, .orderRequestReport, .newsLetter{
+      .navlinkswitch {
+          position: absolute;
+          right: 0;
+          top: -6px;
+      }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+  .contactUsReport,
+  .orderSampleReport,
+  .orderRequestReport {
+    .header-second .date-input-wrapper.cus_wid {
+      width: 34%;
+      margin-right: 5px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.5px) {
+  .cusPdMr {
+    margin-right: 8px;
+  }
+
+  .contactUsReport,
+  .orderSampleReport,
+  .orderRequestReport {
+    .header-second {
+      .search-bar-buttons button.btn {
+        padding: 4px 5px;
+        min-width: auto;
+      }
+
+      .date-input-wrapper.cus_wid {
+        width: 34%;
+        margin-right: 5px;
+        max-width: max-content;
+      }
+    }
+  }
+
+  .contactUsReport {
+    .input-wrapper.searchBox_Sect.cus_wid input {
+      min-width: 120px;
+    }
+
+    .input-wrapper.searchBox_Sect.mb-2.cus_wid {
+      width: 60%;
+      margin-right: 8px;
+    }
+
+    .input-wrapper.searchBox_Sect.mb-2.cus_wid {
+      margin-right: 4px;
+    }
+  }
+
+  .orderSampleReport,
+  .orderRequestReport {
+    .sort_warp {
+      margin-bottom: 6px;
+    }
+  }
+
+    .orderSampleReport, .orderRequestReport{
+        .date-input-wrapper.cus_wid, 
+        .searchBox_Sect{
+            margin-bottom: 15px !important;
+        }
+    }
+    .orderRequestReport{
+        .card-wrapper .card{
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        .req_quote_Cards.active {
+            display: block;
+        }
+    } 
+}
+
+@media (min-width: 375px) and (max-width: 767.5px) {
+  .sort_warp {
+    margin-right: 5px;
+
+    button.sortby-dropdown-toggle.dropdown-toggle {
+      max-width: 80px;
+    }
+  }
+
+  .search-bar .search-bar-controls .header-second {
+    justify-content: flex-start;
+  }
+
+  .header-second .searchBox_Sect {
+    width: 90%;
+  }
+
+  .contactUsReport,
+  .orderSampleReport,
+  .orderRequestReport {
+    .search-bar {
+      margin-top: 60px !important;
+    }
+
+    .date-input-wrapper.cus_wid {
+      width: 50%;
+    }
+
+    .date-input-wrapper input:last-child {
+      margin-right: 5px;
+    }
+  }
+
+  .newsLetter {
+    
+    .table-bordered tbody tr.tblRowData {
+      height: 56px;
+    }
+
+    .header-second .search-bar-buttons {
+      width: auto;
+    }
+  }
+
+    .contactUsReport .date-input-wrapper.cus_wid {
+        max-width: max-content;
+    }
+    .orderRequestReport{
+        .card-wrapper .card{
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        .req_quote_Cards.active {
+            display: block;
+        }
+    }
+}
+
+@media (min-width: 375px) and (max-width: 575px) {
+  .main-layout .left-sidebar {
+    width: auto;
+  }
+
+  .menu-container.sidebarMenu.active {
+    width: 170px;
+  }
+
+  .left-sidebar {
+    .logoWrapper {
+      padding: 5px 10px;
+    }
+
+    .logoWrapper .logo-icon {
+      width: 145px !important;
+    }
+
+    .menu-container {
+      padding: 0 15px;
+    }
+
+    .Main-menubar {
+      ul.submenu {
+        padding: 8px 5px !important;
+        left: 190px !important;
+        width: 200px;
+      }
+      .menu-item .submenu .sidebar-link {
+        padding: 8px 8px;
+        display: flex;
+        white-space: inherit;
+        align-items: center;
+        line-height: 20px;
+        color: #405660;
+        font-size: 14px;
+        word-wrap: break-word;
+        position: relative;
+        max-width: 180px;
+      }
+    }
+
+    .sidebarMenu .res_monu_link:hover span.hide-menu {
+      left: 62px;
+    }
+  }
+
+    .contactUsReport, .orderSampleReport, 
+    .orderRequestReport {
+        .date-input-wrapper.cus_wid {
+            width: 100%;
+        }
+        .header-second .searchBox_Sect{
+            width: 100%;
+        }
+        .search-bar .search-bar-controls .header-second {
+            margin-top: 50px;
+        }
+    }
+
+    .contactUsReport {
+        .date-input-wrapper.cus_wid{
+            max-width: max-content;
+            width: 100%;
+        }
+        .searchBox_Sect.mb-2.cus_wid{
+            display: inline-block !important;
+        }
+
+    .searchBox_Sect.mb-2.cus_wid input:nth-child(2),
+    .searchBox_Sect.mb-2.cus_wid input:nth-child(3) {
+      margin-left: 0 !important;
+    }
+    .searchBox_Sect.mb-2.cus_wid input:first-child,
+    .searchBox_Sect.mb-2.cus_wid input:nth-child(2) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+@media (min-width: 375px) and (max-width: 414px) {
+  .contactUsReport {
+    .date-input-wrapper.cus_wid {
+      max-width: max-content;
+      width: 100%;
+    }
+    .header-second .searchBox_Sect input {
+      min-width: 85px;
+    }
+  }
+}
+
+@media (max-width: 1024.98px) {
+    .search-bar {
+        margin-top: 90px !important;
+    }
+}
+
+.usermanagement-container {
+    .all_user {
+        .table.dataTable {
+            thead td.tblTitle:nth-child(1){
+                width:33%;
+            }
+            td.tblTitle.nameList.text-no-ellipsis {
+                text-align: center;
+            }
+            td.tblRowtd.nameList.text-no-ellipsis {
+                text-align: center !important;
+            }
+        }
+    }
+}
+
+.orderRequestReport .table.dataTable td.tblRowtd:first-child {
+  width: auto;
+}
+@supports (-webkit-appearance: none) {
+  .orderRequestReport {
+    .table.dataTable td.tblRowtd:nth-child(2) {
+      min-width: 250px;
+    }
+
+    .table.dataTable td.tblRowtd:nth-child(5) {
+      min-width: 200px;
+  }
+  }
+}
+
+.header-container.fixed{
+   .head_text{
+    @include media-max(md) {
+      font-size: 14px;
+    }
+  }
+
+  .headersec button.btn.d-md-block{
+    @include media-max(md) {
+      display: none !important;
+    }
+  }
+}
+
+.orderSampleReport .table-bordered thead, .orderReport .table-bordered thead, .contactUsReport .table-bordered thead, .orderRequestReport .table-bordered thead {
+  background: transparent !important;
+}

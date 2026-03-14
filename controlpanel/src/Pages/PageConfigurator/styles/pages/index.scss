@@ -1,0 +1,21 @@
+@import "pageviewer";
+@import "pagebuilder";
+:global{
+    body{
+        background-color: var(--clr-white)!important;
+        
+        @media (min-width: 992px) {
+            .hide-desktop { display: none !important; } /* Hide on desktop */
+        }
+
+        @media (max-width: 991px) and (min-width: 577px) {
+            .hide-tablet { display: none !important; } /* Hide on tablet */
+        }
+
+        @media (max-width: 576px) {
+            .hide-mobile { display: none !important; } /* Hide on mobile */
+        }
+    }
+    
+    
+}

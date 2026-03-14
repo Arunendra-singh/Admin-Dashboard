@@ -1,0 +1,14 @@
+@import '../../../styles/mixins.scss';
+
+.dataTblePagination {
+    width: 100%; justify-content: flex-end; align-items: center;  line-height: 18px; margin-top: 10px; cursor: pointer; display: flex; padding-left: 0; list-style: none; border-radius: 0.25rem; float: right; margin-bottom: 15px;
+    :global{
+        li {
+            border: none; background: transparent !important; color: #667b84; padding: 5px; text-align: center; margin-left: 10px; width: 30px;  height: 30px;   
+        }
+        li.active,  li:focus {
+            border: 1px solid var(--clr-primary-dark)!important; background: #fff !important; color: var(--clr-primary-dark); border-radius: 5px; width: 30px; height: 30px; padding: 5px; text-align: center;
+        }
+    }
+    
+}

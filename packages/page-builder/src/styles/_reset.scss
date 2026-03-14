@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0; height: 100%;
+}
+
+body {
+    // font-family: 'Nunito Sans' !important;
+    font-size: var(--font-body-size); line-height: 1; scrollbar-width: thin !important;
+
+    &.sidebar-open {
+        overflow: hidden !important;
+    }
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #c8c8c8;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}

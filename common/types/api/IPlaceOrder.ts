@@ -1,0 +1,61 @@
+export interface IPlaceOrderPayload {
+    FirstName: string;
+    LastName: string;
+    CompanyName: string;
+    PhoneNumber: string;
+    Address1: string;
+    Address2: string;
+    City: string;
+    State: string;
+    ZipCode: string;
+    Country: string;
+    EmailId: string;
+    ShippingFirstName: string;
+    ShippingLastName: string;
+    ShippingEmailId: string;
+    ShippingCity: string;
+    ShippingState: string;
+    ShippingZip: string;
+    ShippingAddress1: string;
+    ShippingAddress2: string;
+    ShippingCountryGUID: string;
+    ShippingCompanyName: string;
+    ShippingName: string;
+    ShippingPhone: string;
+    addressGuid: string;
+    TotalAmount: string;
+    CardType: string;
+    CardNumber: string;
+    CardExpiryDate: string;
+    CardCVV: string;
+    BasketDetailsList: BasketDetailsList[];
+    BasketFreightCharges: number;
+    SalesTax: number;
+    PaytraceTransaction_Id: string;
+    CardExpiryYear: string;
+    Shipping: number;
+    SubTotal: number;
+    PaypalTransactionId: string;
+    GuestUser: boolean;
+    FreightMethodName: string;
+    FreightTypeName: string;
+    BillingCountryGUID: string;
+    UserGuid: string;
+    CardTypeMode: string;
+    BasketFreightCharge: string;
+    strFreightCharge: string;
+    ShipViaID: string;
+    ShipViaValue: string;
+    Basketfreightname: string;
+    CaptchaResponse: string;
+    OrderGuid: string;
+    Paymentgateway: string;
+}
+
+export interface BasketDetailsList {
+    BasketDetailsGuid: string;
+    ProductGuid: string;
+    FreightCharge: any;
+    FreightName: any;
+    ArtVaultGuid: any;
+}

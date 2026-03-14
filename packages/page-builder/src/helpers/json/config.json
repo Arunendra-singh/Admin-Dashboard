@@ -1,0 +1,208 @@
+{
+    "configuration": {
+        "type": "root",
+        "children": [
+            {
+                "type": "jsx",
+                "element": "DraggableParent",
+                "props": {
+                    "id": "builder-canvas"
+                },
+                "children": [
+                    {
+                        "type": "jsx",
+                        "element": "DraggableRowContainer",
+                        "props": {
+                            "cols": 1,
+                            "gridColumn": {
+                                "desktop":"1fr",
+                                "tablet": "1fr",
+                                "mobile": "1fr"
+                            }
+                        },
+                        "children": [
+                            {
+                                "type": "jsx",
+                                "element": "BuilderBreadCrumb",
+                                "props": {
+                                    "activeLink": "Test Page",
+                                    "style":""
+                                },
+                                "elementConfig":[{
+                                    "fieldType": "input",
+                                    "propsName": "activeLink",
+                                    "inputType": "text",
+                                    "required": false,
+                                    "disabled": true
+                                },
+                                {
+                                    "fieldType": "textarea",
+                                    "propsName": "style",
+                                    "required": false
+                                }],
+                                "elemId":"breadCrumb_1"
+                            }                            
+                        ],
+                        "elemId":"dr_0"
+                    },
+                    {
+                        "type": "jsx",
+                        "element": "DraggableRowContainer",
+                        "props": {
+                            "cols": 1,
+                            "gridColumn": {
+                                "desktop":"1fr",
+                                "tablet": "1fr",
+                                "mobile": "1fr"
+                            }
+                        },
+                        "children": [
+                            {
+                                "type": "jsx",
+                                "element": "ProductSection",
+                                "props": {
+                                    "sectionname": "NEWARRIVALS",
+                                    "CategoryGuid": "30B138BC-A747-4D13-A6B6-C1D341B202C6",
+                                    "isCarousel": false,
+                                    "NoofSwatches": 2,
+                                    "IsSwatchesEnabled": true,
+                                    "ProductCount": 1,
+                                    "style":""
+                                },
+                                "elementConfig":[{
+                                    "fieldType": "select",
+                                    "propsName": "sectionname",
+                                    "apiCallToFetchOption": "Category-Section",
+                                    "required": true
+                                },
+                                {
+                                    "fieldType": "input",
+                                    "propsName": "CategoryGuid",
+                                    "inputType": "text",
+                                    "required": true
+                                },
+                                {
+                                    "fieldType": "input",
+                                    "propsName": "NoofSwatches",
+                                    "inputType": "number",
+                                    "required": true
+                                },
+                                {
+                                    "fieldType": "input",
+                                    "propsName": "ProductCount",
+                                    "inputType": "number",
+                                    "required": true
+                                },
+                                {
+                                    "fieldType": "input",
+                                    "propsName": "isCarousel",
+                                    "inputType": "checkbox",
+                                    "required": false
+                                },
+                                {
+                                    "fieldType": "input",
+                                    "propsName": "IsSwatchesEnabled",
+                                    "inputType": "checkbox",
+                                    "required": false
+                                },
+                                {
+                                    "fieldType": "textarea",
+                                    "propsName": "style",
+                                    "required": false
+                                }],
+                                "elemId":"section_1"
+                            }
+                        ],
+                        "elemId":"dr_4"
+                    },
+                    {
+                        "type": "jsx",
+                        "element": "DraggableRowContainer",
+                        "props": {
+                            "cols": 2,
+                            "gridColumn": {
+                                "desktop":"6fr 6fr",
+                                "tablet": "6fr 6fr",
+                                "mobile": "12fr"
+                            }
+                        },
+                        "children": [
+                            { "type": "jsx", "element": "ComponentSelector", "elemId": "abc-000" },
+                            { "type": "jsx", "element": "ComponentSelector", "elemId": "abc-001" }
+                        ],
+                        "elemId":"dr_1"
+                    },
+                    {
+                        "type": "jsx",
+                        "element": "DraggableRowContainer",
+                        "props": {
+                            "cols": 1,
+                            "gridColumn": {
+                                "desktop":"1fr",
+                                "tablet": "1fr",
+                                "mobile": "1fr"
+                            }
+                        },
+                        "children": [
+                            {
+                                "type": "jsx",
+                                "element": "Hello",
+                                "props": {
+                                    "name": "Rohan",
+                                    "style":""
+                                },
+                                "elemId":"jsx_Hello",
+                                "elementConfig":[{
+                                    "fieldType": "input",
+                                    "propsName": "name",
+                                    "inputType": "text",
+                                    "required": true
+                                },
+                                {
+                                    "fieldType": "textarea",
+                                    "propsName": "style",
+                                    "required": false
+                                }]
+                            }                        
+                        ],
+                        "elemId":"dr_3"
+                    },
+                    {
+                        "type": "jsx",
+                        "element": "DraggableRowContainer",
+                        "props": {
+                            "cols": 1,
+                            "gridColumn": {
+                                "desktop":"1fr",
+                                "tablet": "1fr",
+                                "mobile": "1fr"
+                            }
+                        },
+                        "children": [
+                            {
+                                "type": "html",
+                                "element": "div",
+                                "props": {
+                                    "content": "Hello World",
+                                    "style":"div#html_1 { color: blue; }"
+                                },
+                                "elementConfig":[{
+                                    "fieldType": "textarea",
+                                    "propsName": "content",
+                                    "required": true
+                                },
+                                {
+                                    "fieldType": "textarea",
+                                    "propsName": "style",
+                                    "required": false
+                                }],
+                                "elemId":"html_1"
+                            }
+                        ],
+                        "elemId":"dr_2"
+                    }
+                ]
+            }            
+        ]
+    }
+}

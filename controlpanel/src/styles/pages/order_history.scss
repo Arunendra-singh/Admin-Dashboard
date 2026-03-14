@@ -1,0 +1,261 @@
+.dropdownContainer>div>div>span>small {
+    // display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 5px 20px;
+
+    b {
+        margin: 0px 20px;
+    }
+}
+
+.orderReportWrapper >.orderReport>.custom-table>.custom-table-body>.dropdownContainer {
+    border: 0px;
+}
+
+.smallTextContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.orderReportWrapper {
+    padding-bottom: 50px;
+    //min-width:1200px;
+
+    .editor-table {
+        border: none;
+
+        table {
+            border: none;
+            outline: none;
+
+            #reqorderList {
+                border: none;
+                outline: none;
+
+                .norecords {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 20px;
+                    padding: 20px;
+                    background-color: #fbfbfe;
+                    border: none;
+                    color: #212529;
+
+                    td {
+                        text-transform: capitalize;
+                        font-size: 14px;
+                        word-wrap: break-word;
+                        border: none;
+                        padding: 16px 10px 16px 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tableHeaderCell,
+.table-cell {
+    padding: 12px;
+    min-width: 100px;
+}
+
+.orderReport {
+    clear: both;
+    padding: 40px 0px 20px;
+    background-color: #fff;
+    position: relative;
+
+    .custom-table {
+        .custom-table-header,
+        .custom-table-body {
+            .orderIdHeader,
+            .dateHeader,
+            .orderNumber,
+            .orderDate {
+                width: 9%!important;
+            }
+
+            .statusHeader,
+            .freightHeader,
+            .status,
+            .freightBody {
+                width: 12%!important;
+            }
+
+            .qPrdNameH,
+            .qPrdName {
+                width: 25%;
+            }
+
+            .qDateH,
+            .qDate {
+                width: 15%;
+            }
+
+            .qQtyH,
+            .qQty {
+                width: 10%;
+            }
+
+            .qCmpnyH,
+            .qCmpny {
+                width: 25%;
+            }
+
+            .qViewH,
+            .qView {
+                width: 5%;
+            }
+            // .shipHeader, .billHeader, .shipBody, .billBody{
+            //     width: 22%!important;
+            // }pp
+
+            .shipHeader,
+            .billHeader {
+                width: 22%!important;
+                max-width: 100%;
+                white-space: normal;
+                border: 20px 20px;
+
+                @media (max-width:600px) {
+                    flex: 0 0 70%;
+                }
+            }
+
+            .shipBody,
+            .billBody {
+                width: 22%!important;
+                word-break: break-all;
+                text-align: center;
+
+                @media (max-width:600px) {
+                    flex: 0 0 73%;
+                }
+            }
+
+            .orderIdHeader,
+            .orderNumber {
+                @media (max-width:600px) {
+                    flex: 0 0 35%;
+                }
+            }
+
+            .amountHeader,
+            .orderDetailHeader,
+            .amountBody,
+            .orderDetailsBody {
+                width: 6%!important;
+
+                button.btn {
+                    background-color: var(--main-color) !important;
+                    color: var(--clr-white) !important;
+                }
+            }
+        }
+
+        .custom-table-header {
+            .tableHeaderCell {
+                font-size: .875rem;
+                font-weight: bold;
+                letter-spacing: 0.54px;
+                line-height: 17px;
+                color: #fff;
+                padding: 5px;
+                text-align: center;
+            }
+        }
+    }
+    
+    // AI solution
+
+    .quoteRTable {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+
+        .HeaderContainerRQ {
+            background-color: var(--main-color);
+            font-weight: bold;
+
+            th {
+                color: #fff;
+                padding: 10px;
+            }
+        }
+        
+        .tableHeaderCell,
+        .tableBodyCell {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+
+            td {
+                padding: 10px;
+            }
+
+            .actiontTD {
+                .icon-eye {
+                    cursor: pointer;
+                    color: var(--main-color);
+    
+                    &:before {
+                        content: "\e93d";
+                    }
+                }
+            }
+        }
+    }
+    // AI solution
+
+    &~.pagination {
+        margin-bottom: 20px;
+    }
+}
+
+.tableBodyCell {
+    font-size: .875rem;
+    letter-spacing: 0.54px;
+    line-height: 22px;
+    padding: 20px;
+    text-align: center;
+}
+
+.table-cell {
+    border: 1px solid #efefef !important;
+}
+
+.containerDIV {
+    margin: 20px;
+    outline-color: #cfcfcf;
+}
+
+.test {
+    overflow: hidden;
+}
+//toggle order data css start
+
+.orderToggleData {
+    padding: 30px;
+
+    @media (max-width:600px) {
+        flex-wrap: nowrap !important;
+        padding: 15px;
+    }
+
+    .billingAddress,
+     .shippingAddress {
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: normal;
+            color: #555;
+        }
+    }
+}

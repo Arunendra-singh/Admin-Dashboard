@@ -1,0 +1,97 @@
+@import "../../styles/mixins";
+.FeaturedCategories {
+     :global {
+        .list-title {
+            margin-bottom: 30px;
+            h3 {
+                color: var(--main-color);
+                font-size: px-to-rem(30);
+                font-weight: 500;
+                text-align: left;
+                width: 100%;
+                text-transform: capitalize;
+                line-height: 1;
+                margin-bottom: 0px;
+                @include media-max(md) {
+                    font-size: px-to-rem(22);
+                }
+            }
+            a {
+                font-size: px-to-rem(15);
+                color: #444444;
+                text-transform: capitalize;
+                font-weight: 500;
+                transition: 0.3s;
+                transform: scale(1);
+                letter-spacing: 0em;
+                &:hover {
+                    color: var(--main-color);
+                    transition: 0.3s;
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .TopCategoriesCategoryView {
+            max-width: 100%;
+            >.row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 15px;
+                a {
+                    flex: 0 0 24%;
+                    @include media-max(md) {
+                        flex: 0 0 45%;
+                        border-bottom: 1px solid #ccc;
+                    }
+                    .category-image {
+                        margin-bottom: 10px;
+                        position: relative;
+                        img {
+                            width: 100%;
+                            height: auto;
+                            @include media-max(md) {
+                                height: auto;
+                            }
+                        }
+                        &:hover {
+                            &:before {
+                                background: rgba(197, 198, 199, 0.6392156863);
+                                z-index: 1;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                content: "";
+                            }
+                        }
+                    }
+                    .category-name {
+                        @include media-max(xs){min-height: 75px;}
+                        h3 {
+                            font-size: px-to-rem(16);
+                            font-weight: 500;
+                            line-height: 24px;
+                            color: #444444;
+                            margin-bottom: 0px;
+                            @include media-max(xs){
+                                font-size: px-to-rem(14);
+                            }
+                        }
+                        p {
+                            font-size: px-to-rem(14);
+                            font-weight: 400;
+                            line-height: 21px;
+                            color: #777777;
+                            @include media-max(xs){
+                                font-size: px-to-rem(12);
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

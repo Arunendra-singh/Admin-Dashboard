@@ -1,0 +1,170 @@
+@font-face {
+    font-family: "ewizicon";
+    src: url(#{$fontPath}/ewizicons.ttf) format("truetype"),
+        url(#{$fontPath}/ewizicons.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="ico-"],
+[class*=" ico-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "ewizicon" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1; /* Better Font Rendering ============ */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-grid-2-plus:before { content: "\e197"; }
+
+.ico-mobile:before { content: "\1f4f1"; }
+
+.ico-tablet-button:before { content: "\f10a"; }
+
+.ico-desktop:before { content: "\1f5a5"; }
+
+.ico-heading:before { content: "\f1dc"; }
+
+.ico-code:before { content: "\f121"; }
+
+.ico-text:before { content: "\f893"; }
+
+.ico-image:before { content: "\f03e"; }
+
+.ico-link-simple:before { content: "\e1cd"; }
+
+.ico-rectangle-wide:before { content: "\f2fc"; }
+
+.ico-rectangle-vertical-history:before { content: "\e237"; }
+
+.ico-gallery-thumbnails:before { content: "\e3aa"; }
+
+.ico-grid-horizontal:before { content: "\e307"; }
+
+.ico-gear:before { content: "\f013"; }
+
+.ico-gears:before { content: "\f085"; }
+
+.ico-pen-clip:before { content: "\f305"; }
+
+.ico-pencil:before { content: "\f303"; }
+
+.ico-check:before { content: "\f00c"; }
+
+.ico-check-double:before { content: "\f560"; }
+
+.ico-xmark:before { content: "\1f5d9"; }
+
+.ico-trash-can:before { content: "\f2ed"; }
+
+.ico-objects-align-bottom:before { content: "\e3bb"; }
+
+.ico-objects-align-center-horizontal:before { content: "\e3bc"; }
+
+.ico-objects-align-center-vertical:before { content: "\e3bd"; }
+
+.ico-objects-align-left:before { content: "\e3be"; }
+
+.ico-objects-align-right:before { content: "\e3bf"; }
+
+.ico-objects-align-top:before { content: "\e3c0"; }
+
+.ico-list-radio:before { content: "\e1d0"; }
+
+.ico-filter-list:before { content: "\e17c"; }
+
+.ico-list:before { content: "\f03a"; }
+
+.ico-list-check:before { content: "\f0ae"; }
+
+.ico-list-tree:before { content: "\e1d2"; }
+
+.ico-font:before { content: "\f031"; }
+
+.ico-table:before { content: "\f0ce"; }
+
+.ico-strikethrough:before { content: "\f0cc"; }
+
+.ico-line-height:before { content: "\f871"; }
+
+.ico-underline:before { content: "\f0cd"; }
+
+.ico-bold:before { content: "\f032"; }
+
+.ico-font-case:before { content: "\f866"; }
+
+.ico-italic:before { content: "\f033"; }
+
+.ico-paragraph:before { content: "\f1dd"; }
+
+.ico-superscript:before { content: "\f12b"; }
+
+.ico-subscript:before { content: "\f12c"; }
+
+.ico-text-height:before { content: "\f034"; }
+
+.ico-text-width:before { content: "\f035"; }
+
+.ico-text-size:before { content: "\f894"; }
+
+.ico-circle-info:before { content: "\f05a"; }
+
+.ico-circle-xmark:before { content: "\f05c"; }
+
+.ico-circle-minus:before { content: "\f056"; }
+
+.ico-circle-plus:before { content: "\f055"; }
+
+.ico-chevron-right:before { content: "\f054"; }
+
+.ico-chevron-left:before { content: "\2329"; }
+
+.ico-circle-check:before { content: "\f05d"; }
+
+.ico-circle-question:before { content: "\f29c"; }
+
+.ico-arrow-left:before { content: "\2190"; }
+
+.ico-arrow-right:before { content: "\f061"; }
+
+.ico-arrow-up:before { content: "\2191"; }
+
+.ico-arrow-down:before { content: "\f063"; }
+
+.ico-expand:before { content: "\f065"; }
+
+.ico-compress:before { content: "\f066"; }
+
+.ico-triangle-exclamation:before { content: "\f071"; }
+
+.ico-globe:before { content: "\1f310"; }
+
+.ico-list-ol:before { content: "\f0cb"; }
+
+.ico-list-ul:before { content: "\f0ca"; }
+
+.ico-keyboard:before { content: "\2328"; }
+
+.ico-h1:before { content: "\f313"; }
+
+.ico-h2:before { content: "\f314"; }
+
+.ico-h3:before { content: "\f315"; }
+
+.ico-zoom-in:before { content: "\f00e"; }
+
+.ico-zoom-out:before { content: "\f010"; }
+
+.ico-trash:before { content: "\f2ee"; }
+
+.ico-edit:before { content: "\f044"; }
+
+.ico-plus:before { content: "\e905"; }
+
+.ico-close:before { content: "\e900"; }

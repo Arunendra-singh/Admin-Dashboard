@@ -1,0 +1,32 @@
+@import "../../../styles/mixins";
+.search_component {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-gray);
+    border-radius: 6px;
+    padding: 0;
+    width: 100%;
+    max-width: 300px;
+    background-color: var(--clr-white);
+    :global{
+        input {
+            flex: 1;
+            padding: px-to-rem(9) px-to-rem(0);
+            border: 0!important;
+            outline: none;
+            border-radius: 6px!important;
+            font-size: px-to-rem(13);
+        }
+        .icon-MagnifyingGlass,
+        .icon-close_small {
+            cursor: pointer;
+            color: #888;
+            margin: 0 px-to-rem(10);
+            font-size: px-to-rem(20);
+        }
+        .icon-close_small { font-size: px-to-rem(24);}
+        .icon-close_small:hover {
+            color: #333;
+        }
+    }
+  }

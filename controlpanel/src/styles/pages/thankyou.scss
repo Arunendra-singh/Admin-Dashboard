@@ -1,0 +1,113 @@
+@import "../mixins";
+//[data-id="bodyCont"]{text-align: center !important;}
+
+.thankyouAndGuestUser {
+    display: flex;justify-content: space-between;gap: 15px 30px;
+
+    @include media-max(lg) {
+        flex-direction: column;
+    }
+}
+
+#thankyouContent {
+    flex: 2;
+}
+
+.thankyouWrapper {
+    .heading {
+        padding: 35px 0 25px;margin: 0;color: var(--txt-color);font-size: 20px;text-transform: uppercase;font-weight: var(--font-weight-bold);letter-spacing: 0.8px;
+    }
+
+    .details {
+        margin: 15px 0;line-height: var(--font-body-lineheight);
+
+        .btn_link_wrapper {
+            display: flex;gap: 15px;text-transform: capitalize;
+
+            @include media-max(xs) {
+                flex-direction: column;
+            }
+
+            .btn {/*text-decoration: none;color:var(--txt-color);font-weight:600;font-size:calc(var(--font-body-size) + 2px);
+                &:hover{text-decoration: none;}*/
+                width: 220px;text-decoration: none;
+            }
+        }
+    }
+    
+    .printContainer {
+        display: flex;
+        justify-content: space-between;
+
+        .print {
+            height: 40px !important;
+        }
+    }
+}
+
+.thankyouprint {
+    @include btnMixinHover();width: 150px;margin: 15px auto;opacity: 0;visibility: hidden;
+}
+
+#createPassword {
+    flex: 1;box-shadow: 0 1px 4px rgba(0,0,0,0.15);border-radius: 5px;padding: 14px 18px;margin-top: 35px;
+
+    @include media-max(lg) {
+        margin-top: 0;
+    }
+
+    .form-helper-text {
+        max-width: 450px;
+    }
+
+    .btnSubmit {
+        max-width: 450px;width: 100%;
+    }
+}
+
+.addressContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    padding-top: 20px;
+
+    .table-responsive {
+        .table-cell {
+            padding-right: 70px;
+            white-space: nowrap;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            text-align: left;
+        }
+
+        .result {
+            min-width: 200px;
+            padding-right: 180px;
+            white-space: nowrap;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            text-align: left;
+        }
+    }
+}
+
+.table-cell {
+    border: 1px solid #C6C6C6;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+}
+
+.addresslabel {
+    font-size: 1.14286rem;
+    letter-spacing: 0.04px;
+    line-height: 22px;
+    font-weight: bold;
+}

@@ -1,0 +1,23 @@
+export type MicroServices = {
+    ANALYTICS: string;
+    BASKET: string;
+    CATALOG: string;
+    CONFIGURATION: string;
+    ERP_INTEGRATION: string;
+    FREIGHT: string;
+    GLOBAL_ELEMENTS: string;
+    HTML_CONFIGURATOR: string;
+    ORDER: string;
+    PRODUCT_ADMIN: string;
+    PRODUCT_DETAILS: string;
+    PRODUCT_GE: string;
+    PRODUCT_IMPORT_EXPORT: string;
+    PRODUCT_LISTING: string;
+    PRODUCT: string;
+    REVIEW_MANAGEMENT: string;
+    USER: string;
+    USERS: string;
+    VIRTUAL_SAMPLE: string;
+    FTPUPLOAD: string;
+    CONTROLPANEL: string;
+};

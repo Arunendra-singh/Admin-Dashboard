@@ -1,0 +1,142 @@
+import { gql } from "@apollo/client";
+
+export const useQueryGetAssignProduct = gql`
+    query getassignedProducts($collectionGuid: String) {
+        assignedProducts(collectionGuid: $collectionGuid) {
+            message
+            statuscode
+            success
+            data {
+                all_ParentNameGuid
+                all_ParentNameType
+                isAllAssignedProducts
+                listCategories {
+                    alias
+                    asiCategoryName
+                    bannerImageAlt
+                    bannerText
+                    canonicalLink
+                    categorylistingImageAlt
+                    categorylistingImageName
+                    collectionBannerImageName
+                    collectionGuid
+                    collectionImageAlt
+                    collectionImageName
+                    collectionName
+                    collectionType
+                    createdBy
+                    createdDateUtc
+                    dcCategoryName
+                    dcSubCategoriesName
+                    descriptionText
+                    displayOrder
+                    featuredIconURL
+                    featureIconImageAlt
+                    furtherDescriptionText
+                    h1Tag
+                    iconImageName
+                    ipAddress
+                    isActive
+                    isAllAssignedProducts
+                    isBottomNode
+                    isExcludedFromSitemap
+                    isNewSection
+                    isProductMirroring
+                    languageGuid
+                    menuBannerImageAlt
+                    menuBannerImageName
+                    metaDescription
+                    metaKeywords
+                    metaRobots
+                    metaTitle
+                    mirrorCollectionGuid
+                    modifiedBy
+                    modifiedDateUtc
+                    offerBannerImageAlt
+                    offerBannerImageName
+                    parentCollectionGuid
+                    parentCollectionName
+                    productCount
+                    resoAlias
+                    resoASICategoryName
+                    resoBannerImageAlt
+                    resoBannerText
+                    resoCanonicalLink
+                    resoCollectionBannerImageName
+                    resoCollectionGuid
+                    resoCollectionImageAlt
+                    resoCollectionImageName
+                    resoCollectionName
+                    resoCollectionType
+                    resoDCCategoryName
+                    resoDCSubCategoriesName
+                    resoDescriptionText
+                    resoFeaturedIconURL
+                    resoFeatureIconImageAlt
+                    resoFurtherDescriptionText
+                    resoH1Tag
+                    resoIconImageName
+                    resoIsAllAssignedProducts
+                    resoIsBottomNode
+                    resoIsExcludedFromSitemap
+                    resoIsProductMirroring
+                    resoMenuBannerImageAlt
+                    resoMenuBannerImageName
+                    resoMetaDescription
+                    resoMetaKeywords
+                    resoMetaRobots
+                    resoMetaTitle
+                    resoMirrorCollectionGuid
+                    resoOfferBannerImageAlt
+                    resoOfferBannerImageName
+                    resoParentCollectionGuid
+                    resoParentCollectionName
+                    resoSageCategoryName
+                    sageCategoryName
+                    sapCategoryID
+                    websiteGuid
+                }
+                listResources {
+                    className
+                    createdBy
+                    createdDateUtc
+                    ipAddress
+                    isActive
+                    languageGuid
+                    message
+                    modifiedBy
+                    modifiedDateUtc
+                    order
+                    resourceGuid
+                    resourceKey
+                    resourceType
+                    resourceValue
+                    totalCount
+                    websiteGuid
+                }
+                selectlistUnAssignProd {
+                    disabled
+                    imagename
+                    selected
+                    text
+                    value
+                    group {
+                        disabled
+                        name
+                    }
+                }
+                selectlistAssignProd {
+                    disabled
+                    imagename
+                    selected
+                    text
+                    value
+                    group {
+                        disabled
+                        name
+                    }
+                }
+            }
+        }
+    }
+`;

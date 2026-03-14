@@ -1,0 +1,210 @@
+@import "../../styles/mixins";
+
+.QaManagement {
+  :global {
+    .searchActionDropdown-wrap {
+        display: flex;
+        justify-content: flex-end;
+        .btn_import,
+        .btn_export {
+          @include BlueOutlineBtnMixin();
+        }
+        .btn_create {
+          @include themeBtnMixin();
+        }
+    
+        .searchField {
+          position: relative;
+          align-items: center;
+          display: flex;
+          max-width: 300px;
+          .icon {
+            position: absolute;
+            right: 10px;
+            z-index: 1;
+            font-size: 17px;
+          }
+          & > input {
+            width: 100%;
+            color: var(--clr_7);
+            font-size: px-to-rem(14) !important;
+            padding: px-to-rem(7) px-to-rem(35) px-to-rem(7) px-to-rem(15);
+            border: 1px solid #ccd3d6;
+            border-radius: 4px !important;
+            outline: none;
+            height: auto;
+          }
+    
+          .clear-button {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            font-size: px-to-rem(20);
+            padding: px-to-rem(5);
+            cursor: pointer;
+            color: #888;
+          }
+        }
+        .drdSearchCategory {
+            .select-dropdown-toggle{
+                background: var(--clr-white);
+                border: 1px solid var(--clr_6);
+                color: var(--clr_7);
+                min-width: 230px;
+                padding: px-to-rem(6) px-to-rem(15);
+                font-size: px-to-rem(14) !important;
+                font-weight: 300;
+                vertical-align: middle;
+                line-height: 24px !important;
+                outline: none !important;
+                box-shadow: none !important;
+                text-align: left;
+                &:after {
+                    content: "\e93a";
+                    font-family: icomoon !important;
+                    position: absolute;
+                    right: 10px;
+                    color: #ccc;
+                    font-size: 17px;
+                }
+                
+            }
+        }
+        .dropdown {
+          .sortby-dropdown-toggle {
+            background: var(--clr-white);
+            border: 1px solid var(--clr_6);
+            color: var(--clr_7);
+            padding: px-to-rem(5) px-to-rem(15);
+            font-size: px-to-rem(14) !important;
+            font-weight: 300;
+            vertical-align: middle;
+            line-height: 24px !important;
+            outline: none !important;
+            box-shadow: none !important;
+            .icon {
+              font-size: px-to-rem(19);
+              vertical-align: sub;
+            }
+          }
+          .dropdown-menu {
+            padding: px-to-rem(5); height: 300px; overflow-y: scroll;
+            .dropdown-item {
+              padding: 0 !important;
+              &:hover,
+                &:focus,
+                &:active {
+                  background: transparent;
+                  color: var(--txt-color) !important;
+                  border-radius: 4px;
+                }
+              span {
+                display: block;
+                font-size: px-to-rem(14) !important;
+                vertical-align: middle;
+                font-weight: 300;
+                color: var(--txt-color);
+                padding: px-to-rem(7) !important;
+                &.catName { font-weight: 500; }
+                cursor: pointer;
+                &:hover,
+                &:focus,
+                &:active {
+                  background: var(--clr-primary-light);
+                  color: var(--txt-color) !important;
+                  border-radius: 4px;
+                }
+              }
+            }
+          }
+        }
+        .btn_reset{
+            @include GrayOutlineBtnMixin();
+        }
+        .btn_create { @include themeBtnMixin(); margin-left: auto;}
+    }
+    #QuestionAnswer {
+      .action-inline {
+        button {
+          font-size: 0; padding: 0;
+          &:hover{
+            text-decoration: none!important;
+          }
+          i { color: #405660; }
+        }
+      }
+    }
+  }
+}
+
+.QaPopup {
+  .modal-dialog {
+    .modal-content {
+        border-radius: 6px !important;
+        border: 0 !important;
+        .modal-header {
+            background: #EBF0F5 !important;
+            border-radius: 0;
+            padding: px-to-rem(20) px-to-rem(20) !important;
+            border-top-left-radius: 6px !important;
+            border-top-right-radius: 6px !important;
+            border-bottom: 0;
+            text-align: center;
+        }
+    }
+    
+    .btn-close {
+        border: none; background: transparent; display: inline-block; padding: 0 !important; margin: 0 !important; width: auto !important; height: auto !important;
+
+        &::before {  content: "\e924"; font-family: "icomoon"; font-size: 30px; }
+    }
+    .modal-title {
+        margin: 0;
+        color: #334f5b;
+        text-transform: capitalize;
+        font-size: px-to-rem(16);
+        font-weight: 500;
+        width: 100%;
+        text-align: left;
+    }
+    .modal-body {
+        padding: px-to-rem(10) px-to-rem(20); color: #334f5b;background: #EBF0F5 !important;
+    }
+  }
+  
+}
+:global{
+  dialog[data-shm].QaPopup, dialog[shm].QaPopup, dialog[data-pos].QaPopup{
+    border-radius: 6px;
+    .dialog-container {
+      .dialog-content {
+        border-radius: 6px !important;
+        border: 0 !important;
+        .dialog-header {
+          background: var(--clr-white) !important;  border-radius: 0; padding: px-to-rem(20) px-to-rem(20) !important; border-top-left-radius: 6px !important; border-top-right-radius: 6px !important; border-bottom: 0;
+          .dialog-title {
+            margin: 0; color: #334f5b; text-transform: capitalize; font-size: px-to-rem(16); font-weight: 500; width: 100%; text-align: center;
+          }
+          .close {
+            border: none; background: transparent; display: inline-block; padding: 0 !important; margin: 0 !important; width: auto !important; height: auto !important; font-size: 0 !important;
+            &::before {  content: "\e924"; font-family: "icomoon"; font-size: 30px; color: #334f5b;}
+          }
+        }
+        .dialog-body {
+          padding: px-to-rem(10) px-to-rem(20); color: #334f5b;
+          p { font-size: px-to-rem(14); }
+        }
+        .dialog-footer {
+          padding: px-to-rem(10) px-to-rem(20); justify-content: center;
+          .btn-info { @include btnMixin(); margin-bottom: 15px; }
+          .btn-cancel {
+            @include BlueOutlineBtnMixin; border: 1px solid !important; margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+}

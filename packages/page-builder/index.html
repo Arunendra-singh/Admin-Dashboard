@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="Home" />
+    <meta name="description" content="Home" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'none'"> -->
+    <link href="https://demo.ewizsaas.com/" rel="canonical" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <title>Demo React</title>
+    <script src="/js/web-ms-tokens.js"></script>
+</head>
+<body>
+    <!--hiddenguid-->
+    <div id="root"></div>
+    <script>
+        var __ENV__ = "__ENV__NAME__";
+        var Amazon_CDNUrl = 'https://d207zvy2rsg5b5.cloudfront.net';
+        var cdnURL = 'https://d207zvy2rsg5b5.cloudfront.net';
+        var WebsiteURL = "https://pagebuilder.ewizsaas.com/";
+        var FirstName;
+        var UserEmail;
+        var isFromCheckout;
+         var cookiedetails= '{"UserGuid":"5601df85-eda7-4046-a289-80fd3695eef3","EmailAddress":"mamender.shaw@powerweave.com","FirstName":"shubhamtest","MiddleName":"","LastName":"singhtest","WebsiteURL":null,"SessionGuid":"be0920c7-0f03-4c04-a53f-0888055ca4fe","City":"St. Cloud","State":"Minnesota","Country":"United States","CountryGUID":"45c537aa-3385-420c-b8af-f8a0d5e9cd32","LastLogin":"2023-06-05T10:26:45.448Z","LanguageId":0,"IsActive":true,"RoleId":1,"UserType":"Admin","WebsiteGuid":"B7E9DAB7-2B08-4D11-89E3-D9A88B63A734","RoleName":"Admin","CreatedDateUtc":"2021-10-05T10:34:52.358Z","PermissionGuids":null,"FrontEndPermissionGuids":null,"PermissionDetailGuids":null,"AdminMenu":null,"IsGuestUser":null,"RememberMe":false,"RememberExpirationTime":null,"IsOrderEdit":false,"EditOrder_CustomerGuid":null,"EditCurrencyGuid":null,"EditOrderGuid":null,"NonMasterCustomer":false,"CallFromAPI":false,"SalesRepresentative":false,"SrAccNo":null,"CustomField1":null,"CustomField2":null,"OtherUserType":null,"PopupDate":"0001-01-01T00:00:00","WarehouseGuids":null,"WarehouseName":null,"Warehouses":null,"RegistrationType":null,"CustomerGroupDiscount":0.0}'
+        var UserGuid = "";
+        var SessionGuid = "41c172fd-98ed-48eb-bf49-e36c7d374a4a";
+        var currencysymbol = "4597027C-F49C-423F-BC53-D2B614DBD858";
+        var defaultlanguageguid = "3238bf6d-ddcb-4f65-aadb-3eee730fb9c8";
+        var defaultcurrencyguid = "4597027C-F49C-423F-BC53-D2B614DBD858";
+        var currencyguid = "4597027C-F49C-423F-BC53-D2B614DBD858";
+        var languageuid = "3238bf6d-ddcb-4f65-aadb-3eee730fb9c8";
+        var websiteguid = '8FF00A25-B6ED-4799-9D2F-412DBA1F7C66';
+        var SaaS_Freight_Microservice_URL = "https://freight.ewizsaas.com/";
+        var SaaS_Product_Microservice_URL = "https://product.ewizsaas.com/";
+        var SaaS_ProductListing_Microservice_URL = "https://Productlisting.ewizsaas.com/";
+        var SaaS_Analytics_Microservice_URL = "https://analytics.ewizsaas.com/";
+        var SaaS_Product_GlobalElements_Microservice_URL = "https://productge.ewizsaas.com/";
+        var SaaS_Basket_Microservice_URL = "https://basket.ewizsaas.com/";
+        var SaaS_ProductAdmin_Microservice_URL = "https://productadmin.ewizsaas.com/";
+        var SaaS_User_Microservice_URL = "https://user.ewizsaas.com/";
+        var SaaS_ProductDetails_Microservice_URL = "https://productdetails.ewizsaas.com/";
+        var SaaS_ProductGE_Microservice_URL = "https://productge.ewizsaas.com/";
+        var SaaS_ReviewManagement_Microservice_URL = "https://review.ewizsaas.com/";
+        var SaaS_Order_Microservice_URL = "https://order.ewizsaas.com/";
+        var SaaS_HTMLConfigurator_Microservice_URL = "https://htmlconfigurator.ewizsaas.com/";
+        var SaaS_Configuration_Microservice_URL = "https://configuration.ewizsaas.com/";
+        var SaaS_GlobalElements_Microservice_URL = "https://globalelements.ewizsaas.com/";
+        var SaaS_ProductGE_URL = "https://productge.ewizsaas.com/";
+        if (__ENV__ !== undefined && __ENV__ === "beta") {
+            var Amazon_CDNUrl = "https://d207zvy2rsg5b5.cloudfront.net";
+            var cdnURL = "https://d207zvy2rsg5b5.cloudfront.net";
+            var WebsiteURL = "https://demo3.ewizsaas.com/";
+            var SaaS_Product_Microservice_URL = "https://productbeta.ewizsaas.com/";
+            var SaaS_ProductListing_Microservice_URL = "https://Productlistingbeta.ewizsaas.com/";
+            var SaaS_Analytics_Microservice_URL = "https://analyticsbeta.ewizsaas.com/";
+            var SaaS_Basket_Microservice_URL = "https://basketbeta.ewizsaas.com/";
+            var SaaS_ProductAdmin_Microservice_URL = "https://productadminbeta.ewizsaas.com/";
+            var SaaS_User_Microservice_URL = "https://userbeta.ewizsaas.com/";
+            var SaaS_ProductDetails_Microservice_URL = "https://productdetailsbeta.ewizsaas.com/";
+            var SaaS_ProductGE_Microservice_URL = "https://productgebeta.ewizsaas.com/";
+            var SaaS_ReviewManagement_Microservice_URL = "https://reviewbeta.ewizsaas.com/";
+            var SaaS_Order_Microservice_URL = "https://orderbeta.ewizsaas.com/";
+            var SaaS_HTMLConfigurator_Microservice_URL = "https://htmlconfiguratorbeta.ewizsaas.com/";
+            var SaaS_Configuration_Microservice_URL = "https://configurationbeta.ewizsaas.com/";
+            var SaaS_GlobalElements_Microservice_URL = "https://globalelementsbeta.ewizsaas.com/";
+        }
+        var SiteCssVersion = "?V=01022023084941";
+        var ClientIP = "0.0.0.1";
+        var PopupLabelInfo = "Warning,Success,Error,Confirm,Info,Ok,Yes,No";
+        var CampaignGuid = "";
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

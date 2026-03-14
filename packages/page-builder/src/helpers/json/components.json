@@ -1,0 +1,263 @@
+{
+    "categories": [
+        {
+            "name": "Basic",
+            "components": [
+                {
+                    "label": "Text",
+                    "icon": "ico-text",
+                    "type": "html",
+                    "element": "div",
+                    "content": "Hello World",
+                    "props": {
+                        "style":""
+                    },
+                    "elementConfig":[{
+                        "fieldType": "textarea",
+                        "propsName": "content",
+                        "required": true
+                    },
+                    {
+                        "fieldType": "textarea",
+                        "propsName": "style",
+                        "required": false
+                    }]
+                },
+                {
+                    "label": "Heading",
+                    "icon": "ico-heading",
+                    "type": "jsx",
+                    "element": "Heading",
+                    "props": {
+                        "text": "Heading",
+                        "type": "h1",
+                        "style":""
+                    },
+                    "elementConfig":[{
+                        "fieldType": "input",
+                        "propsName": "text",
+                        "inputType": "text",
+                        "required": true
+                    },
+                    {
+                        "fieldType": "select",
+                        "propsName": "type",
+                        "apiCallToFetchOption": "Headings",
+                        "required": true
+                    },
+                    {
+                        "fieldType": "textarea",
+                        "propsName": "style",
+                        "required": false
+                    }]
+                },
+                {
+                    "label": "Image",
+                    "icon": "ico-image",
+                    "type": "jsx",
+                    "element": "Image",
+                    "props": {
+                        "src": "",
+                        "lazy": false,
+                        "alt": "",
+                        "style":""
+                    },
+                    "elementConfig":[{
+                        "fieldType": "input",
+                        "propsName": "src",
+                        "inputType": "url",
+                        "required": true
+                    },
+                    {
+                        "fieldType": "input",
+                        "propsName": "alt",
+                        "inputType": "text",
+                        "required": false
+                    },
+                    {
+                        "fieldType": "input",
+                        "propsName": "lazy",
+                        "inputType": "checkbox",
+                        "required": false
+                    },
+                    {
+                        "fieldType": "textarea",
+                        "propsName": "style",
+                        "required": false
+                    }]
+                },
+                {
+                    "label": "Link",
+                    "icon": "ico-link-simple",
+                    "type": "jsx",
+                    "element": "Link",
+                    "props": {
+                        "link": "https://spademo.ewizsaas.com",
+                        "title": "Test link",
+                        "name": "Test link",
+                        "target": "_self",
+                        "style":""
+                    },
+                    "elementConfig":[{
+                        "fieldType": "input",
+                        "propsName": "link",
+                        "inputType": "url",
+                        "required": true
+                    },
+                    {
+                        "fieldType": "input",
+                        "propsName": "title",
+                        "inputType": "text",
+                        "required": true
+                    },
+                    {
+                        "fieldType": "input",
+                        "propsName": "name",
+                        "inputType": "text",
+                        "required": true
+                    },
+                    {
+                        "fieldType": "select",
+                        "propsName": "target",
+                        "apiCallToFetchOption": "Links",
+                        "required": true
+                    },
+                    {
+                        "fieldType": "textarea",
+                        "propsName": "style",
+                        "required": false
+                    }]
+                },
+                {
+                    "label": "Button",
+                    "icon": "ico-rectangle-wide",
+                    "type": "multiple-option",
+                    "element": "Button",
+                    "option": [
+                        {
+                            "label": "Button without Icon",
+                            "type": "jsx",
+                            "element": "Button",
+                            "props": {
+                                "type": "button",
+                                "link": "",
+                                "name": "Click Me",
+                                "style":""
+                            },
+                            "elementConfig":[{
+                                "fieldType": "input",
+                                "propsName": "link",
+                                "inputType": "url",
+                                "required": false
+                            },
+                            {
+                                "fieldType": "select",
+                                "propsName": "type",
+                                "apiCallToFetchOption": "Buttons",
+                                "required": true
+                            },
+                            {
+                                "fieldType": "input",
+                                "propsName": "name",
+                                "inputType": "text",
+                                "required": true
+                            },
+                            {
+                                "fieldType": "textarea",
+                                "propsName": "style",
+                                "required": false
+                            }]
+                        },
+                        {
+                            "label": "Button with Icon",
+                            "type": "jsx",
+                            "element": "ButtonWithIcon",
+                            "props": {
+                                "type": "button",
+                                "link": "",
+                                "name": "Click Me",
+                                "iconName": "icon-shopping-bag",
+                                "style":""
+                            },
+                            "elementConfig":[{
+                                "fieldType": "input",
+                                "propsName": "link",
+                                "inputType": "url",
+                                "required": false
+                            },
+                            {
+                                "fieldType": "select",
+                                "propsName": "type",
+                                "apiCallToFetchOption": "Buttons",
+                                "required": true
+                            },
+                            {
+                                "fieldType": "input",
+                                "propsName": "iconName",
+                                "inputType": "text",
+                                "required": true
+                            },{
+                                "fieldType": "input",
+                                "propsName": "name",
+                                "inputType": "text",
+                                "required": true
+                            },
+                            {
+                                "fieldType": "textarea",
+                                "propsName": "style",
+                                "required": false
+                            }]
+                        }
+                    ]
+                }
+                
+            ]
+        },
+        {
+            "name": "Ewiz",
+            "components": [
+                {
+                    "label": "Products",
+                    "icon": "ico-grid-horizontal",
+                    "type": "jsx",
+                    "element": "ProductSection",
+                    "props": {
+                        "sectionName": "new-arrival",
+                        "sectionTitle": "New Arrivals",
+                        "isCarousel": false,
+                        "items": 3,
+                        "style":""
+                    },
+                    "elementConfig":[{
+                        "fieldType": "select",
+                        "propsName": "sectionName",
+                        "apiCallToFetchOption": "Category-Section",
+                        "required": true
+                    },
+                    {
+                        "fieldType": "input",
+                        "propsName": "sectionTitle",
+                        "inputType": "text",
+                        "required": true
+                    },
+                    {
+                        "fieldType": "input",
+                        "propsName": "items",
+                        "inputType": "number",
+                        "required": true
+                    },
+                    {
+                        "fieldType": "input",
+                        "propsName": "isCarousel",
+                        "inputType": "checkbox"
+                    },
+                    {
+                        "fieldType": "textarea",
+                        "propsName": "style",
+                        "required": false
+                    }]
+                }
+            ]
+        }
+    ]
+}

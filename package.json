@@ -1,0 +1,39 @@
+{
+  "name": "ewiz-mono",
+  "version": "0.0.9",
+  "engineStrict": true,
+  "engines": {
+    "node": ">=18.14.0 <19.0.0",
+    "yarn": ">=1.22.19",
+    "npm": "please-use-yarn"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohangaikwad/ewiz-mono.git"
+  },
+  "keywords": [],
+  "author": "Rohan Gaikwad <rohan.gaikwad@powerweave.com>",
+  "license": "ISC",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/rohangaikwad/ewiz-mono/issues"
+  },
+  "scripts": {
+    "postinstall": "",
+    "husky:pre-commit": "node .husky/scripts/pre_commit",
+    "prepare": "node .husky/scripts/prepare"
+  },
+  "homepage": "https://dev.ewizsaas.com/spa",
+  "workspaces": [
+    "common",
+    "templates/template-*",
+    "web-server",
+    "website-*",
+    "packages/eslint-*",
+    "packages/page-builder",
+    "controlpanel"
+  ],
+  "devDependencies": {
+    "husky": "8.0.3"
+  }
+}

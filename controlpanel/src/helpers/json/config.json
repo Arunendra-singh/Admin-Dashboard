@@ -1,0 +1,36 @@
+{
+    "configuration": {
+        "type": "root",
+        "children": [
+            {
+                "type": "jsx",
+                "element": "DraggableParent",
+                "props": {
+                    "id": "builder-canvas"
+                },
+                "children": [
+                    {
+                        "type": "jsx",
+                        "element": "DraggableRowContainer",
+                        "props": {
+                            "cols": 1,
+                            "gridColumn": {
+                                "desktop": "1fr",
+                                "tablet": "1fr",
+                                "mobile": "12fr"
+                            }
+                        },
+                        "children": [
+                            {
+                                "type": "jsx",
+                                "element": "ComponentSelector",
+                                "elemId": "abc-000"
+                            }
+                        ],
+                        "elemId": "dr_1"
+                    }
+                ]
+            }
+        ]
+    }
+}

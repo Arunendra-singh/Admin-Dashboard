@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.grid-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    cursor: grab;
+  }
+  
+  .grid-item:active {
+    cursor: grabbing;
+  }
+  .grid-view-top{
+    padding: 0 20px;
+  }

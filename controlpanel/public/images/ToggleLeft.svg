@@ -1,0 +1,22 @@
+<!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
+
+<defs>
+</defs>
+<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+	<path d="M 64.903 70.097 H 25.097 C 11.236 70.097 0 58.861 0 45 v 0 c 0 -13.861 11.236 -25.097 25.097 -25.097 h 39.806 C 78.764 19.903 90 31.139 90 45 v 0 C 90 58.861 78.764 70.097 64.903 70.097 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(88,198,124); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+	<path d="M 64.903 62.898 L 64.903 62.898 c 9.885 0 17.898 -8.013 17.898 -17.898 v 0 c 0 -9.885 -8.013 -17.898 -17.898 -17.898 h 0 c -9.885 0 -17.898 8.013 -17.898 17.898 v 0 C 47.005 54.885 55.018 62.898 64.903 62.898 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(249,249,249); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+</g>
+</svg> -->
+
+
+<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g id="ToggleLeft" clip-path="url(#clip0_989_219)">
+    <path id="Vector" d="M14.625 4.375H7.125C5.63316 4.375 4.20242 4.96763 3.14752 6.02252C2.09263 7.07742 1.5 8.50816 1.5 10C1.5 11.4918 2.09263 12.9226 3.14752 13.9775C4.20242 15.0324 5.63316 15.625 7.125 15.625H14.625C16.1168 15.625 17.5476 15.0324 18.6025 13.9775C19.6574 12.9226 20.25 11.4918 20.25 10C20.25 8.50816 19.6574 7.07742 18.6025 6.02252C17.5476 4.96763 16.1168 4.375 14.625 4.375ZM7.125 13.125C6.50693 13.125 5.90275 12.9417 5.38884 12.5983C4.87494 12.255 4.4744 11.7669 4.23788 11.1959C4.00135 10.6249 3.93947 9.99653 4.06005 9.39034C4.18062 8.78415 4.47825 8.22733 4.91529 7.79029C5.35233 7.35325 5.90915 7.05562 6.51534 6.93505C7.12153 6.81447 7.74987 6.87635 8.32089 7.11288C8.8919 7.3494 9.37996 7.74994 9.72334 8.26384C10.0667 8.77775 10.25 9.38193 10.25 10C10.25 10.8288 9.92076 11.6237 9.33471 12.2097C8.74866 12.7958 7.9538 13.125 7.125 13.125Z" fill="#99A7AD"/>
+    <circle class="toggle-dot" cx="6" cy="10" r="2" fill="white"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_989_219">
+      <rect width="20" height="20" fill="white" transform="translate(0.875)"/>
+    </clipPath>
+  </defs>
+</svg>

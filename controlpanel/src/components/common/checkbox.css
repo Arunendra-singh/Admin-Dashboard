@@ -1,0 +1,30 @@
+/* .Checkbox {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 5px 10px;
+  } */
+  
+  .Checkbox-box {
+    font-size: 1rem;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #405660;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .Checkbox-box-active {
+    background-color: #1CBF70;
+    border: 1px solid #1CBF70;
+    color: #fff;
+  }
+  
+  .Checkbox-label {
+    font-size: 1.5ch;
+  }
+  

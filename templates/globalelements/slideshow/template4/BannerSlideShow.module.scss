@@ -1,0 +1,87 @@
+@import "../../styles/mixins";
+
+
+/****************slider show dots design*************/
+
+.homepageBanner {
+    :global {
+        .swiper-button-prev.swiper-button-disabled,
+        .swiper-button-next.swiper-button-disabled {
+            pointer-events: auto;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            right: 20px;
+            position: absolute;
+            top: 50%;
+            z-index: 99;
+            border: 1px solid #BCBCBC;
+            color: #bcbcbc;
+            border-radius: 50%;
+            font-size: 18px !important;
+            height: 30px;
+            width: 30px;
+            line-height: 30px;
+            text-align: center;
+            box-shadow: 3px 3px 6px #b7b7b7;
+            background-color: #fff;
+            opacity: 1;
+
+            &:hover {
+                background: var(--clr-white) !important;
+                border: 1px solid var(--clr-white) !important;
+            }
+
+            &::after {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                width: 11px;
+                height: 11px;
+                background: transparent;
+                text-indent: -9999px;
+                border-top: 2px solid #bfbfbf;
+                border-left: 2px solid #bfbfbf;
+                transition: all 250ms ease-in-out;
+                text-decoration: none;
+                color: transparent;
+                transform: rotate(-50deg);
+                top: 11px;
+                left: 13px;
+            }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            background: var(--main-color);
+            color: var(--clr-white);
+            margin-top: 0 !important;
+            transform: translateY(-50%);
+
+            &:hover {
+                background: transparent;
+                border: 1px solid var(--main-color)
+            }
+
+            &::after {
+                font-size: 20px;
+            }
+
+            @media (max-width:600px) {
+                display: none;
+            }
+        }
+
+        .swiper-button-next {
+            &::after {
+                content: "";
+                transform: rotate(136deg) !important;
+                left: 9px !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,173 @@
+@import "../../styles/mixins";
+.header-desc .navbarlinks{
+    display: block!important;
+}
+
+.v-top{
+    vertical-align: top;
+}
+
+.tblTitle {
+    font-weight: bold;
+}
+
+.tblRowData{
+    border: 1px solid #dee2e6 !important;
+}
+
+.ml-12{
+    margin-left: 12rem !important
+}
+
+// 
+.ordermockupreport{
+    .header-second{display: flex;width: 100%;
+        @include media-max(md){width: 100%;display: initial !important; margin-top: 80px;;}
+        .input-wrapper {width: 90% !important;margin-bottom: 0 !important;
+            @include media-max(md){display: initial;
+                flex: inherit;width: 90%;margin-bottom: 10px !important;
+            }
+            input{width: 97% !important;}
+        }
+        .search-bar-buttons{margin-bottom: 0 !important;
+            @include media-max(md){margin-bottom: 10px !important;}
+        }
+        .date-input-wrapper{
+            @include media-max(md){width: 100%;border: none;}
+            input{
+                @include media-max(md){min-width: 102px;margin-right: 5px;        border: 1px solid #ccd3d6;
+                    border-radius: 6px;
+                }
+                @include media-max(){min-width: 102px;}
+            }
+        }
+        .date-input-wrapper>input{width: 50%;
+            border-radius: 6px;
+        }
+        .sort_warp button.sortby-dropdown-toggle.dropdown-toggle{
+            top: 0px !important;
+            @include media-max(md){top: -6px !important;max-width: 102px;}
+        }
+    }
+    .select-wrapper{display: none !important;}
+    .search-bar{
+        @include media-max(md){ margin-top: 40px !important; }
+        @media(max-width: 767px){ margin-top: 50px !important; }
+        .search-bar-controls{
+            .header-second{width: 100% !important;flex-wrap: initial !important;
+                @include media-max(md){display: initial;margin-top: 50px;}
+                .searchBox_Sect{display: none !important;}
+                .date-input-wrapper.cus_wid {
+                    width: 35%;
+                    @include media-max(md){width: 100%;border: none;}
+                    input{width: 50%;
+                       
+                        @include media-max(md){min-width: 102px;margin-right: 5px;}
+                        @include media-max(xl){min-width: 149px;margin-right: 5px;}
+                    }
+                }
+                .search-bar-buttons {width: initial;
+                    justify-content: right;
+                    @include media-max(md){margin-left: 0 !important;}
+                }
+            }
+        }
+    }
+    .btn-download{margin: 10px 0; 
+        background: linear-gradient(231.01deg, #2e6cbb 0, #1ca0c5 100%) !important;
+        border-color: transparent !important;
+        float: right;
+        padding: 2px 20px;
+        border-radius: 4px !important;
+    }
+    section{
+        .Listing_estimate{
+            table {
+                tbody{
+                    tr td.Namelist{
+                        span{text-transform: capitalize;}
+                    }
+                    
+                }
+            }
+        }
+    }
+    .popup .reportViewPopup{
+        .bottom-info{    padding: 0 15px 0 0;
+            overflow-y: scroll;
+            height: calc(100vh - 150px);
+            table {    width: 100%;
+                border-collapse: collapse;
+               tr{border: 1px solid #ddd;}
+                td{
+                    padding: 10px 6px;
+                    padding: 10px 6px;
+                    
+                }
+                td:first-child{font-weight: 700;}
+                
+            }
+            
+        }
+    }
+    .table-bordered thead{
+        background: transparent !important;
+    }
+    table{
+        thead{
+            tr{
+                td.orgList{
+                    text-align: center !important;
+                }
+            }
+        }
+        tbody{
+            tr{
+                td.tblRowtd.Namelist{text-align: left !important;}
+                td.orgList{
+                    text-align: center !important;
+                }
+            }
+        }
+    }
+}
+
+.header-container.fixed{
+    .head_text{
+     @include media-max(md) {
+       font-size: 14px;
+     }
+   }
+
+   .navlinkswitch p span {
+        @include media-max(md){
+            font-size: 10px;
+        }
+    }
+}
+
+.usermanagement-container.ordermockupreport {
+    .table.dataTable td.tblRowtd.Namelist.text-no-ellipsis {
+        text-align: left !important;
+        @include media-max(md) {
+            min-width: 250px;
+        }
+    }
+} 
+
+.usermanagement-container{
+    .all_user .table.dataTable thead td.tblTitle:nth-child(1){
+        width: 25%;
+    }
+    .all_user .table.dataTable thead td.tblTitle:nth-child(2),
+    .all_user .table.dataTable thead td.tblTitle:nth-child(4){
+        width: 19%;
+    }
+    .all_user .table.dataTable thead td.tblTitle:nth-child(3){
+        width: 22%;
+    }
+}
+.ordermockupreport table thead tr td.orgList,
+.usermanagement-container.ordermockupreport table tbody tr td.orgList{
+    text-align: left !important;
+}

@@ -1,0 +1,2 @@
+if chromium issue found installusing below code 
+node node_modules/puppeteer/install.js

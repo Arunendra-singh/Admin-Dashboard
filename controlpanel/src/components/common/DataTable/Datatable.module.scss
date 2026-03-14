@@ -1,0 +1,386 @@
+@import '../../../styles/mixins.scss';
+
+.width-5{width: 5%;}
+.width-10{width: 10%;}
+.width-15{width: 15%;}
+.width-20{width: 20%;}
+.width-25{width: 25%;}
+.width-30{width: 30%;}
+.width-40{width: 40%;}
+.width-50{width: 50%;}
+.width-100{width: 100%;}
+
+
+.dataTables_wrapperBox {
+    :global{
+        .table-responsive{
+            box-shadow: none;
+            margin: 0!important;
+            border: 0!important;
+            margin-top:10px;
+
+            .table.dataTable {
+                border-collapse: collapse !important;
+                font-weight: 300;
+                font-size: px-to-rem(14) !important;
+
+                & tr:last-child {
+                    border-radius: 0px !important;
+                }
+
+                & td.theadTitle:first-child, 
+                & td.tblBodyRowtd:first-child {
+                    border-radius: 10px 0 0 10px !important;
+                }
+
+                & td.theadTitle:last-child, 
+                & td.tblBodyRowtd:last-child {
+                    border-radius: 0 10px 10px 0;
+                    text-align: center !important;
+                }
+
+                & thead{
+                     background: #405660!important;
+                    color: #fff;
+                    border-radius: 0px;
+                    height:50px;
+                    border: 0;
+
+                    & > tr:nth-of-type(odd) {
+                        border-radius:0px;
+                    }
+
+                    & > tr{
+                        & > td {
+                            position: relative;font-weight: 400; background: transparent;  color: #fff; border: 0;
+                            &.theadTitle.asc::before, &.theadTitle.desc::before, &.theadTitle.asc::after, &.theadTitle.desc::after{
+                                position: absolute;
+                                display: block;
+                                opacity: 0.3;
+                                right: 0px;
+                                line-height: 9px;
+                                font-size: .8em;
+                                //display: none;
+                            }
+                            
+                            &.theadTitle.asc::before, &.theadTitle.desc::before{
+                                bottom: 50%;
+                                content: "▲" / "";
+                            }
+                            &.theadTitle.asc::after, &.theadTitle.desc::after{
+                                top: 50%;
+                                content: "▼" / "";
+                            }
+                            &.theadTitle.asc::before, &.theadTitle.desc::after {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+
+                & tbody{
+                    tr > td{ border: 0; color:#405660; }
+                    tr.tblBodyRowData{
+                        background-color: #fff;
+                        box-shadow: none;
+                        border-radius: 0px;
+                        border: 0px;     
+                        border: 3px solid #eef5f9;
+                        height: auto;
+                        &:hover {
+                        background-color: #E9F7FC !important;
+                        }
+                        @include media-min(xl){
+                            height: 50px; 
+                        }
+                    }
+                    tr:nth-of-type(odd) {
+                        background-color: #fff !important;
+                    }
+                }
+
+                tr.Rcords_data{
+                    width: 100%;
+                    text-align: center;
+                    font-size: 20px;
+                    padding: 20px;
+                    background-color: #fbfbfe;
+                    border: none;
+                    color: #212529;
+                    td{
+                        text-transform: capitalize;
+                        font-size: px-to-rem(14);
+                        word-wrap: break-word;
+                        border: none;
+                        padding: 9px 15px 9px 15px;
+                    }
+                }
+
+                td.tblBodyRowtd {
+                    vertical-align: middle; padding: 9px 15px 9px 15px!important;  font-size: 14px;
+                    & > span {min-width: 95%;    padding: 0!important;}
+                    .tblbtn-link{ @include link_content(); cursor: pointer;}
+                    .custtooltip {  display: none; }
+                    &.noTooltip { .custtooltip { display: none!important; } }
+                    &:last-child {
+                        .custtooltip {  display: none!important; }
+                    }
+                    &.text-left{
+                        position:relative; 
+                        .ellipsis{  width: 95%; overflow: hidden; display: block;  text-overflow: ellipsis; line-height:normal;} 
+                        &.text-no-ellipsis { .ellipsis{ width: auto;}}
+                        &:hover .custtooltip {
+                            display: block; position: absolute;  background: #088bd7; color:#fff; padding: 5px; font-size: 12px; border-radius: 3px; top: -10px;
+                        }
+                    }
+
+                    .tblbtn-icon {
+                        background: transparent;
+                        border: 0;
+                        padding: 0;
+                        font-size: 22px;
+                        cursor: pointer;
+                        position: relative;
+                        &:hover:after{ 
+                            content:attr(data-title);
+                            position: absolute;
+                            display: initial;
+                            left: auto;
+                            right: -15px;
+                            background: #088bd7;
+                            color:#fff;
+                            padding: 3px 3px;
+                            line-height: normal;
+                            font-size: px-to-rem(11)!important;
+                            border-radius: 3px;
+                            top: -25px;
+                            font-family: 'Euclid Circular B';
+                        }
+                    }
+                    
+                    .action-inline {
+                        display: flex;
+                        gap: 10px;
+                        justify-content: center;
+                        button {
+                            background: none;
+                            border: none;
+                            color: #007bff;
+                            cursor: pointer;
+                            padding: 5px 10px;
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                    
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                    
+                            i {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    .action.DropdownAction {
+                        position: relative;
+                        display: inline-block;
+                        .dropdown-button {
+                            background: none;
+                            border: none;
+                            color: #007bff;
+                            cursor: pointer;
+                            padding: 5px 10px;
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                    
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                    
+                            i {
+                                font-size: 16px;
+                            }
+                        }
+                    
+                        .action_hover {
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            background: #fff;
+                            border: 1px solid #ccc;
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                            z-index: 9999;
+                            white-space: nowrap;
+                            display: none;
+                    
+                            button {
+                                background: none;
+                                border: none;
+                                color: #007bff;
+                                cursor: pointer;
+                                padding: 5px 10px;
+                                display: flex;
+                                align-items: center;
+                                gap: 5px;
+                    
+                                &:hover {
+                                    background: #f0f0f0;
+                                }
+                    
+                                i {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                    .action{ cursor: pointer; a.icon{display: none;} }
+
+                    .action_hover, .action-inline{
+                        button {
+                            background: transparent; border: 0;position: relative; cursor: pointer;
+                            &[data-title="false"] , &[data-title="[object Object]"]{  display: none; }
+                            &{ 
+                                &:hover:after{ 
+                                    content:attr(data-title); position: absolute;  display: initial; left: auto; right: -15px; background: #088bd7;  color:#fff; padding: 3px 3px; line-height: normal; font-size: px-to-rem(11)!important;  border-radius: 3px;  top: -25px;z-index: 9;
+                                }
+                                & > a:after { display: none!important;}
+
+                            }
+                            &[data-title="Edit Customer"] span {
+                                font-size: 0; position: relative;
+                                &:before{
+                                    content: "\e90d"; font-family: "icomoon" !important;  color: var(--color-secondary); font-size: 22px;
+                                }
+                            }
+                            &[data-title="Create Estimate"] span {
+                                font-size: 0;  position: relative;
+                                &:before{
+                                    content: "\e924";  font-family: "Icomoon"; color: var(--color-secondary); font-size: 22px; font-weight: 600;
+                                }
+                            }
+                            &[data-title="Create Sales Order"] span {
+                                font-size: 0; position: relative;
+                                &:before{
+                                    content: "\e923"; font-family: "Icomoon"; color: var(--color-secondary);  font-size: 22px; font-weight: 600;
+                                }
+                            }
+                            &[data-title="Disable"] span{
+                                font-size: 0; position: relative;
+                                
+                                &:before{
+                                    content: "\F377";  font-family: "MaterialIcons";  color: var(--status-Inactive); font-size: 22px;
+                                }
+                            }
+                            &[data-title="Enable"] span {
+                                font-size: 0; position: relative;
+                                
+                                &:before{
+                                    content: "\f5e1";  font-family: "MaterialIcons";  color: var(--status-active); font-size: 22px;
+                                }
+                            }
+                            
+                            &[data-title="Edit"] span {
+                                font-size: 0; position: relative;
+                                &:before{
+                                    content: "\e90d"; font-family: "icomoon"; color: var(--color-secondary);  font-size: 22px;
+                                }
+                            }
+                            &[data-title="Delete"] span {
+                                font-size: 0; position: relative;
+                                
+                                &:before{
+                                    content: "\e90c"; font-family: "icomoon"; color: var(--color-secondary); font-size: 22px;
+                                }
+                            }
+
+                            &[data-title="Resend Mail to Vendor"] span,  &[data-title="Send Artwork to Customer"] span, &[data-title="Email Logo To Artist"] span, &[data-title="Resend Mail To Artist"] span, &[data-title="Email Work Order"] span{
+                                font-size: 0; position: relative;
+                                &:before{
+                                    content: "\e900"; font-family: "icomoon"; color: var(--color-secondary); font-size: 22px;
+                                }
+                            }
+                            &[data-title="Push Order To Artwork"] span,  &[data-title="Re-Upload Proof"] span {
+                                font-size: 0; position: relative;
+                                &:before{
+                                    content: "\f632"; font-family: "MaterialIcons"; color: var(--color-secondary);  font-size: 20px;
+                                }
+                            }
+                            &[data-title="View Artwork"] span {
+                                font-size: 0; position: relative;
+                                &:before{
+                                    content: "\F2EF"; font-family: "MaterialIcons"; color: var(--color-secondary);  font-size: 20px;
+                                }
+                            }
+                            &[data-title="Qc Completed"] span {
+                                font-size: 0; position: relative;
+                                &:before{
+                                    content: "\f135"; font-family: "MaterialIcons"; color: var(--color-secondary);  font-size: 20px;
+                                }
+                            }
+                            &[data-title="Expected Shipout Date"] span {
+                                font-size: 0; position: relative;
+                                &:before{
+                                    content: "\F06B"; font-family: "MaterialIcons"; color: var(--color-secondary);  font-size: 22px;
+                                }
+                            }
+                            &[data-title="Ship & Update Tracking"] span,  &[data-title="Push to Production"] span {
+                                font-size: 0; position: relative;
+                                &:before{
+                                    content: "\f1a8"; font-family: "MaterialIcons"; color: var(--color-secondary);  font-size: 22px;
+                                }
+                            }
+                            &[data-title="Upload Proof"] span {
+                                font-size: 0; position: relative;
+                                &:before{
+                                    content: "\f206"; font-family: "MaterialIcons"; color: var(--color-secondary);  font-size: 20px; display: inline-block; -webkit-transform: rotate(270deg);
+                                    -ms-transform: rotate(270deg);  transform: rotate(270deg);
+                                }
+                            }
+                            &[data-title="Cancel Order"] span {
+                                font-size: 0; position: relative;
+                                &:before{
+                                    content: "\f66b"; font-family: "MaterialIcons"; color: var(--color-secondary);  font-size: 22px;
+                                }
+                            }
+                            &[data-title="Place Hold / Release Hold"] span {
+                                font-size: 0; position: relative;
+                                &:before{
+                                    content: "\f3e6"; font-family: "MaterialIcons"; color: var(--color-secondary);  font-size: 22px;
+                                }
+                            }
+                            &[data-title="Revise Tracking No"] span {
+                                font-size: 0; position: relative;
+                                &:before{
+                                    content: "\f1a8"; font-family: "MaterialIcons"; color: var(--color-secondary);  font-size: 20px;
+                                }
+                            }
+                            &[data-title="Print Work Order"] span {
+                                font-size: 0; position: relative;
+                                &:before{
+                                    content: "\f166"; font-family: "MaterialIcons"; color: var(--color-secondary);  font-size: 20px;
+                                }
+                            }
+                            
+                        }
+                    }
+                    &.orderStatus{
+                        & .ellipsis{
+                            text-overflow: initial;
+                            overflow: visible;
+                            width: auto;
+                            min-width: auto;
+                            display: inline-block;
+                            background-color: rgb(211, 47, 47);
+                            color: var(--clr-white);
+                            padding:px-to-rem(2) px-to-rem(8) !important;
+                            border-radius: px-to-rem(5);
+                            text-align: center;
+                            font-size: px-to-rem(11);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

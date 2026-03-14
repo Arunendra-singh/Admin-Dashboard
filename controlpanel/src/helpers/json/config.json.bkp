@@ -1,0 +1,59 @@
+{
+    "config": {
+        "type": "jsx",
+        "element": "PageContainer",
+        "props": {                    
+            "id": "test-page"
+        },
+        "children": [
+            {
+                "type": "jsx",
+                "element": "Breadcrumb",
+                "props": {
+                    "activeLink": "Test Page"
+                }
+            },
+            {
+                "type": "html",
+                "element": "div",
+                "content": "Hello World",
+                "attributes": {
+                    "style": {
+                        "color": "red"
+                    }
+                }
+            },
+            {
+                "type": "jsx",
+                "element": "Hello",
+                "props": {
+                    "name": "Rohan"
+                }
+            },
+            {
+                "type": "jsx",
+                "element": "Dummy"
+            },
+            {
+                "type": "html",
+                "element": "div",
+                "attributes": {
+                    "style": {
+                        "background": "#f1f1f1"
+                    }
+                },
+                "children": [
+                    {
+                        "type": "jsx",
+                        "element": "ProductSection",
+                        "props": {
+                            "sectionName": "new-arrival",
+                            "sectionTitle": "New Arrivals",
+                            "isCarousel": false
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

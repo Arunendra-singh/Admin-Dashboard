@@ -1,0 +1,46 @@
+.toggle-button{
+.slider {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transform: scale(0.3);
+    overflow: visible;
+
+    .sort {
+        width: 100px;
+        height: 50px;
+        border-radius: 50px;
+        background-color: var(--toggle-switch);
+        position: absolute;
+        top: 20px;
+        bottom: 0;
+        right: 0;
+        margin: auto;  
+        display: flex;
+        align-items: center;
+        &::before{
+            position: absolute;
+            left: 10px;
+            height: 38px;
+            width: 38px;
+            background-color: var(--clr-white);
+            content: " ";
+            border-radius: 50%;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+      }
+      & input {
+        position: absolute;
+        display: none;
+      }
+  }
+}
+  input:checked + .sort::before {
+    transform: translateX(40px);
+  }
+  .slider.on .sort {
+    background: var(--toggle-switch-active);
+    transition: 1s;
+  }
+  

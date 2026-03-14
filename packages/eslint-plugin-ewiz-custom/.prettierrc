@@ -1,0 +1,19 @@
+{
+  "semi": true,
+  "overrides": [
+    {
+      "files": ["*.html", "*.js", "*.ts", "*.jsx", "*.tsx", "*.cjs", "*.cjs"],
+      "options": {
+        "singleQuote": false,
+        "printWidth": 1000,
+        "tabWidth": 4,
+        "trailingComma": "none",
+        "bracketSpacing": true,
+        "semi": true,
+        "useTabs": false,
+        "jsxBracketSameLine": false,
+        "endOfLine": "crlf"
+      }
+    }
+  ]
+}

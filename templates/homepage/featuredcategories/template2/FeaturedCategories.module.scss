@@ -1,0 +1,95 @@
+@import "../../styles/mixins";
+
+.FeaturedCategories {
+    :global {
+
+        margin-top: 50px !important;
+
+        .sectioneading {
+            font-weight: 700;
+            font-size: px-to-rem(26);
+            text-transform: uppercase;
+            font-family: 'Cinzel', Arial, Helvetica, sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .title-main-wrapper {
+            .title {
+                color: var(--txt-color);
+                font-size: px-to-rem(26);
+                font-weight: 700;
+                text-align: left;
+                width: 100%;
+                text-transform: capitalize;
+                line-height: 1;
+
+                @include media-max(md) {
+                    font-size: px-to-rem(22);
+                }
+            }
+
+            a {
+                font-size: px-to-rem(15);
+                color: #444444;
+                text-transform: capitalize;
+                font-weight: 500;
+                transition: 0.3s;
+                transform: scale(1);
+                letter-spacing: 0em;
+                
+                &:hover {
+                    color: var(--main-color);
+                    transition: 0.3s;
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .shopByCategoriesWrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+
+            .imgWrap {
+                position: relative;
+                flex-basis: calc(25% - 20px);
+                max-width: calc(25% - 20px);
+
+                p {
+                    position: absolute;
+                    right: 25px;
+                    bottom: 25px;
+                    display: inline-block;
+                    padding: 15px 30px;
+                    text-transform: uppercase;
+                    background-color: rgba(255,255,255,.8);
+                    font-size: px-to-rem(20);
+                    font-weight: 700;
+                    font-family: $heading-font;
+
+                    @include media-max(md) {
+                        font-size: px-to-rem(14);
+                        right: 10px;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                @include media-max(xs) {
+                    flex-basis: calc(50% - 10px);
+                    max-width: calc(50% - 10px);
+                }
+
+                @media only screen and (max-width: 400px) {
+                    flex-basis: calc(100%);
+                    max-width: calc(100%);
+                }
+            }
+            
+        }
+    }
+}

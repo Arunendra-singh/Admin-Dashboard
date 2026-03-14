@@ -1,0 +1,179 @@
+@import "../../styles/mixins";
+
+.homepageBanner {
+    :global {
+        img {
+            height: auto;
+        }
+
+        .slide {
+            position: relative;
+        }
+
+        .t-slider .controls .nav button {
+            .icon {
+                font-size: 10px;
+
+                &:before {
+                    content: "\e906";
+                    color: #0039a6;
+                }
+            }
+
+            &.prev {
+                transform: rotate(90deg)!important;
+                
+            }
+
+            &.next {
+                transform: rotate(270deg)!important;
+                
+            }
+            
+            @include media-max(xs) {
+                top: 30%;
+            }
+
+        }
+
+        .swiper {
+            .swiper-button-prev,
+            .swiper-button-next {
+                box-shadow: none;
+
+                &:after {
+                    content: "\e906";
+                    font-family: "athena_promo_new";
+                    color: #0039a6;
+                    border: none;
+                    font-size: 8px;
+                    position: absolute;
+                    left: 50% !important;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: auto;
+                    height: auto;
+                    cursor: pointer;
+                    text-indent: 0;
+                }
+            }
+
+            .swiper-button-prev:after {
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+            
+            .swiper-button-next:after {
+                transform: translate(-50%, -50%) rotate(270deg) !important;
+            }
+
+            .swiper-button-disabled {
+                opacity: 0.5;
+            }
+
+            .swiper-button-prev:hover,
+            .swiper-button-next:hover {
+                border: 1px solid #BCBCBC !important;
+            }
+
+            @include media-min(md){
+                .swiper-pagination {
+                    bottom: 20%;
+                    z-index: 2;
+                    left: 13%;
+    
+                    .swiper-pagination-bullet {
+                        width: 30px;
+                        height: 5px;
+                        border: 0 !important;
+                        margin-right: 10px;
+                        border-radius: 0 !important;
+                    }
+                    
+                    .swiper-pagination-bullet-active {
+                        background-color: #0039a6 !important;
+                    }
+                }
+            }
+
+            @include media-max(xs) {
+                top: 50% !important;
+            }
+        }
+
+        .overylayText {
+            position: absolute;
+            top: 80px;
+            left: 80px;
+
+            @include media-max(sm) {
+                top: 10px;
+                left: 30px;
+            }
+
+            .overlayBannerText {
+                width: 420px;
+
+                .title {
+                    text-align: left;
+                    font-size: px-to-rem(50);
+                    line-height: px-to-rem(75);
+                    font-weight: 700;
+                    color: #000;
+
+                    @include media-max(sm) {
+                        font-size: px-to-rem(22);
+                        line-height: px-to-rem(30);
+                    }
+                }
+
+                .subtitle {
+                    text-align: left;
+                    font-size: px-to-rem(30);
+                    line-height: px-to-rem(45);
+                    font-weight: 600;
+                    color: #000;
+
+                    @include media-max(sm) {
+                        font-size: px-to-rem(16);
+                        line-height: px-to-rem(24);
+                    }
+                }
+
+                .para {
+                    text-align: left;
+                    font-size: px-to-rem(16);
+                    line-height: px-to-rem(24);
+                    font-weight: 400;
+                    color: #000;
+                }
+
+                .shopNow {
+                    background-color: var(--main-color);
+                    text-align: left;
+                    font-size: px-to-rem(14);
+                    line-height: px-to-rem(21);
+                    font-weight: 400;
+                    color: #fff;
+                    padding: 10px 25px;
+                    border-radius: 40px;
+                    display: inline-block;
+                    margin-top: 20px;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+
+                    .icon-arrow {
+                        &:before {
+                            content: "\e901";
+                            font-size: px-to-rem(14);
+                            line-height: px-to-rem(30);
+                            color: #fff;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

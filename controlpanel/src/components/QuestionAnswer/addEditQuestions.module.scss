@@ -1,0 +1,178 @@
+@import "../../styles/mixins";
+.addNewQA {
+    :global {
+        .form-group{
+            .form-control {
+                width: 100%;
+                color: var(--clr_7);
+                font-size: 13px;
+                padding: px-to-rem(9) px-to-rem(9);
+                border: 1px solid #ccd3d6!important;
+                border-radius: 4px!important;
+                outline: none;
+                height: auto;
+                &:hover,
+                &:focus,
+                &:active {
+                border-radius: 4px!important;
+                }
+            }
+            select.form-control {
+                background-repeat: no-repeat;
+                background-position: 98% center;
+                background-size: auto 0.8em;
+                background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Ctitle%3Edown-arrow%3C%2Ftitle%3E%3Cg%20fill%3D%22%23000000%22%3E%3Cpath%20d%3D%22M10.293%2C3.293%2C6%2C7.586%2C1.707%2C3.293A1%2C1%2C0%2C0%2C0%2C.293%2C4.707l5%2C5a1%2C1%2C0%2C0%2C0%2C1.414%2C0l5-5a1%2C1%2C0%2C1%2C0-1.414-1.414Z%22%20fill%3D%22%23667b84%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+                background-color: #fff;
+            }
+            .form-check-inline {
+                label { margin-bottom: 0; margin-right: 10px; }
+            }
+            .mandatory { color: #f00; }
+            .errorMessage{ color: #f00; position: absolute; bottom: -15px;}
+            .toggle-radiobutton {
+                width: 100%; margin-right: 0;
+                label{
+                    margin-left: 5px;   
+                }
+                .radiobutton {
+                    position: relative;
+                    display: inline-block;
+                    cursor: pointer;
+                    overflow: visible;
+                    margin-right: 0;
+                    width: 44px;
+                    .switch {
+                        width: 100px;
+                        height: 50px;
+                        border-radius: 50px;
+                        background-color: var(--toggle-switch);
+                        position: absolute;
+                        top: -2px;
+                        bottom: 0;
+                        right: -32px;
+                        margin: auto;  
+                        display: flex;
+                        align-items: center; 
+                        transform: scale(0.3);
+                        cursor: pointer!important;
+                        z-index: 0;
+                        &::before{
+                            position: absolute;
+                            left: 10px;
+                            height: 38px;
+                            width: 38px;
+                            transform: translateX(0px);
+                            background-color: var(--clr-white);
+                            content: " ";
+                            border-radius: 50%;
+                            transition: 0.4s;
+                            cursor: pointer;
+                        }
+                    }
+                    & input.togglecheckbox {
+                        width: 100%; height: auto; opacity: 0; position: relative;  z-index: 1;cursor: pointer;
+                    }
+                }
+                input:checked + .switch{
+                    background: var(--toggle-switch-active);
+                    &::before {
+                        transform: translateX(40px);
+                    }
+                }
+                .radiobutton.on .switch {
+                    // background: var(--toggle-switch-active);
+                    transition: 1s;
+                }
+            }
+        }
+        .OptionWithQuantity .AddMoreOptions {
+            @include GrayOutlineBtnMixin(); display: inline-block!important; width: auto!important; float: right; padding: px-to-rem(6) px-to-rem(10); border: 1px solid!important;font-size: px-to-rem(13) !important;
+        }
+        .AddMoreOptions, .AddMoretable, .AddMoreTextbox {
+            @include btnMixin(); display: inline-block!important; width: auto!important; height: auto!important;  padding: px-to-rem(6) px-to-rem(10); border: 1px solid!important;
+        }
+        .sectionSubTitle {
+            font-size: px-to-rem(16) !important; font-weight: 500; line-height: 22px; margin-bottom: 15px; margin-top: 15px; padding-bottom: 10px;
+            border-bottom: 1px solid #40566047;
+        }
+        .headingWithbutton{
+            display: flex;  flex-direction: row; justify-content : space-between; align-items: center; border-bottom: 1px solid #40566047; margin-bottom: 15px;
+            .sectionSubTitle { 
+                width: 100%; border:0!important; padding: 0!important;
+                .mapQues {  font-size: px-to-rem(14) !important; color: #0E97E7; cursor: pointer;}
+            }
+        }
+
+        .HintTextBox {
+            display: flex; align-items: center; gap: 15px;
+            .deleteBox {
+                position: absolute; right: 0; cursor: pointer;
+            }
+        }
+        .innerQTYDiv {
+            position: relative;
+            .AddMoreOptions {
+                position: absolute; right: 0; top: px-to-rem(35);
+            }
+            .removeTable {
+                position: absolute; right: 0; top: 5px; cursor: pointer; font-weight: 600;
+            }
+        }
+        .linkText {
+            color: var(--clr-primary-dark); cursor: pointer;
+            
+        }
+        /*****************form table css**********/
+        .formTable {
+            border: 0!important;
+            tr{ 
+                border-bottom: 3px solid #eef5f9;
+                td, th{ border: 0!important; padding: 7px 10px!important;}
+            }
+            & td:first-child, & th:first-child { border-radius: 10px 0 0 10px !important;}
+            & td:last-child, & th:last-child { border-radius: 0 10px 10px 0;}
+            .formgroup-btn{
+                text-align: center; vertical-align: middle!important; width: 10%;
+                button.btn { display: inline-flex; padding: 5px 10px; font-size: px-to-rem(13) !important;  height: auto;}
+            }
+            thead{
+                border: 0; vertical-align: middle;background: #405660;font-size: px-to-rem(13); font-weight: 700; color: var(--clr-white);
+                th{
+                    vertical-align: middle!important; font-weight: 400; font-size: px-to-rem(14)!important; color: var(--clr-white); background: transparent!important;
+                    padding: 9px 10px!important;
+                    .tbl-btn-group { display: flex;  justify-content: center; 
+                    .addPlus { padding: 5px 10px; font-size: px-to-rem(13) !important; height: auto; }
+                    }
+                    
+                    .resetdefault { font-size: px-to-rem(13) !important; text-align: center; display: block;  color: #76dbff;  }
+                }
+            }
+            tbody {
+                td{ 
+                    background: var(--clr-white); font-size: px-to-rem(14); font-weight: 300; vertical-align: middle;
+                    .btn-upload {
+                        @include BlueOutlineBtnMixin(); font-size: px-to-rem(12)!important; box-shadow: none!important; border:1px solid !important; height: auto; padding: px-to-rem(4) px-to-rem(6);
+                        i {margin: 0px 2px; font-size: px-to-rem(16) }
+                    }
+                }
+                .form-control {padding: px-to-rem(5) px-to-rem(10); height: auto; border: 1px solid #BFC6CD; font-size: px-to-rem(12); border-radius: 4px !important; }
+                .form-group{ margin-bottom: 0;}
+                .tbl-btn-group {
+                    display: flex; justify-content: center;  align-items: center; gap: 10px;
+                    .addPlus, .addMinus {
+                        background: transparent; padding: 5px 9px; line-height: normal !important;  height: 32px;
+                    }
+                }
+            }
+        }
+        .form-action-buttons{
+            display: flex; flex-direction: row; justify-content: end; align-items: center; gap: 20px;
+            .btn-submit{
+                @include btnMixin();
+            }
+            .btn-cancel{
+                @include BlueOutlineBtnMixin();
+            }
+        }
+    }
+}

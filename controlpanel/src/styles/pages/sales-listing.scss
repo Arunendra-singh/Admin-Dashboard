@@ -1,0 +1,79 @@
+@import "../mixins";
+@import "../vars";
+
+body{ 
+    font-family: 'Euclid Circular B' !important;
+    background-color: rgb(235, 240, 245) !important;
+}
+.List-View-header{
+    .dataTables_wrapper{
+        table{
+            thead{
+                tr{
+                    th.tblTitle.created-date{
+                        position: relative;font-weight: 600;font-size: 14px;
+                       
+                    }
+                    .tblTitle.asc::before, .tblTitle.desc::before, .tblTitle.asc::after, .tblTitle.desc::after{
+                        position: absolute;
+                        display: block;
+                        opacity: 0.3;
+                        right: 10px;
+                        line-height: 9px;
+                        font-size: .8em;
+                        //display: none;
+                        @include media-max(md){right: 10px;}
+                    }
+                    .tblTitle.asc::before, .tblTitle.desc::before{
+                        bottom: 50%;
+                        content: "▲" / "";
+                    }
+                    .tblTitle.asc::after, .tblTitle.desc::after{
+                        top: 50%;
+                        content: "▼" / "";
+                    }
+                    .tblTitle.asc::before, .tblTitle.desc::after {
+                        opacity: 1;
+                    }
+                    .tblTitle span.Asc::before, .tblTitle span.Desc::before, .tblTitle span.Asc::after, .tblTitle span.Desc::after{
+                        position: absolute;
+                        display: block;
+                        opacity: 0.3;
+                        right: 40px;
+                        line-height: 9px;
+                        font-size: .8em;
+                        //display: none;
+                        @include media-max(md){right: 0px;}
+                    }
+                    .tblTitle span.Asc::before, .tblTitle span.Desc::before{
+                        bottom: 50%;
+                        content: "▲" / "";
+                    }
+                    .tblTitle span.Asc::after, .tblTitle span.Desc::after{
+                        top: 50%;
+                        content: "▼" / "";
+                    }
+                    .tblTitle span.Asc::before, .tblTitle span.Desc::after {
+                        opacity: 1;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td.flyerName{text-transform: capitalize;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap; 
+                        max-width: 120px;
+                    }
+                    
+                }
+            }
+        }
+    }   
+}
+.nodata{
+    text-align: center;
+    padding-top: 50px;
+}
+

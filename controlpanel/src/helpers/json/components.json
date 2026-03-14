@@ -1,0 +1,449 @@
+{
+    "categories": [
+        {
+            "name": "Basic",
+            "components": [
+                {
+                    "label": "Heading",
+                    "icon": "icon-Text-1",
+                    "type": "jsx",
+                    "element": "Heading",
+                    "props": {
+                        "text": "Heading",
+                        "type": "h1",
+                        "alignment": "left",
+                        "text color": "#000000",
+                        "fontFamily": "Euclid Circular B",
+                        "fontWeight": "normal",
+                        "fontSize": "32",
+                        "textTransform": "unset",
+                        "display" : ["desktop","tablet","mobile"]
+                    },
+                    "elementConfig": [
+                        {
+                            "fieldType": "input",
+                            "propsName": "text",
+                            "inputType": "text",
+                            "required": true
+                        },
+                        {
+                            "fieldType": "select",
+                            "propsName": "type",
+                            "apiCallToFetchOption": "Headings",
+                            "required": true
+                        },
+                        {
+                            "fieldType": "buttongroup",
+                            "propsName": "alignment",
+                            "apiCallToFetchOption": "Alignment",
+                            "buttonGroupType":"alignment",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "color-picker",
+                            "propsName": "text color",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multifields.select",
+                            "propsName": "fontFamily",
+                            "group":"typography",
+                            "apiCallToFetchOption": "fontFamily",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multifields.select",
+                            "propsName": "fontWeight",
+                            "group":"typography",
+                            "apiCallToFetchOption": "fontWeight",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multifields.input",
+                            "propsName": "fontSize",
+                            "group":"typography",
+                            "inputType": "text",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multifields.select",
+                            "propsName": "textTransform",
+                            "group":"typography",
+                            "apiCallToFetchOption": "textTransform",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multibuttongroup",
+                            "propsName": "display",
+                            "apiCallToFetchOption": "displayScreen",
+                            "buttonGroupType": "display",
+                            "required": false
+                        }
+                    ]
+                },
+                {
+                    "label": "Description",
+                    "icon": "icon-format_align_left",
+                    "type": "textEditor",
+                    "element": "div",
+                    "content": "Hello World",
+                    "props": {
+                        "content": "<p>Description Text</p>",
+                        "alignment": "left",
+                        "text color": "#000000",
+                        "fontFamily": "Euclid Circular B",
+                        "fontWeight": "normal",
+                        "fontSize": "14",
+                        "textTransform": "unset",
+                        "display" : ["desktop","tablet","mobile"]
+                    },
+                    "elementConfig": [
+                        {
+                            "fieldType": "ckeditor",
+                            "propsName": "content",
+                            "inputType": "text",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "buttongroup",
+                            "propsName": "alignment",
+                            "apiCallToFetchOption": "Alignment",
+                            "buttonGroupType":"alignment",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "color-picker",
+                            "propsName": "text color",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multifields.select",
+                            "propsName": "fontFamily",
+                            "group":"typography",
+                            "apiCallToFetchOption": "fontFamily",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multifields.select",
+                            "propsName": "fontWeight",
+                            "group":"typography",
+                            "apiCallToFetchOption": "fontWeight",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multifields.input",
+                            "propsName": "fontSize",
+                            "group":"typography",
+                            "inputType": "text",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multifields.select",
+                            "propsName": "textTransform",
+                            "group":"typography",
+                            "apiCallToFetchOption": "textTransform",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multibuttongroup",
+                            "propsName": "display",
+                            "apiCallToFetchOption": "displayScreen",
+                            "buttonGroupType": "display",
+                            "required": false
+                        }
+                    ]
+                },
+                {
+                    "label": "Image",
+                    "icon": "icon-Image-2",
+                    "type": "jsx",
+                    "element": "Image",
+                    "props": {
+                        "src": "",
+                        "caption": "",
+                        "alignment": "left",
+                        "link": "none",
+                        "image size": "custom",
+                        "size": "px",
+                        "width": "150",
+                        "height": "150",
+                        "border type": "none",
+                        "BorderWidth": "1",
+                        "border radius": "px",
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "left": "0",
+                        "x": "0",
+                        "y": "0",
+                        "blur": "0",
+                        "spread": "0",
+                        "color": "#131313",
+                        "bordercolor": "#131313",
+                        "display":["desktop","tablet","mobile"]
+                    },
+                    "elementConfig": [
+                        {
+                            "fieldType": "input",
+                            "propsName": "src",
+                            "customLabel": "Choose Image",
+                            "customfield": "imageuploader",
+                            "inputType": "url",
+                            "required": true
+                        },
+                        {
+                            "fieldType": "input",
+                            "propsName": "caption",
+                            "inputType": "text",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "buttongroup",
+                            "propsName": "alignment",
+                            "apiCallToFetchOption": "Alignment",
+                            "buttonGroupType":"alignment",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "input",
+                            "propsName": "link",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "select",
+                            "propsName": "image size",
+                            "apiCallToFetchOption": "Imagesize",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multifields.select",
+                            "propsName": "size",
+                            "group":"Size",
+                            "apiCallToFetchOption": "Size",
+                            "required": false
+                            
+                        },
+                        {
+                            "fieldType": "multifields.input",
+                            "propsName": "width",
+                            "group":"Size",
+                            "inputType": "number",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multifields.input",
+                            "propsName": "height",
+                            "group":"Size",
+                            "inputType": "number",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "input",
+                            "propsName": "BorderWidth",
+                            "group":"Border",
+                            "customLabel" : "Width",
+                            "inputType": "number",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "select",
+                            "propsName": "border type",
+                            "group":"Border",
+                            "customLabel" : "Type",
+                            "apiCallToFetchOption": "BorderType",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "color-picker",
+                            "propsName": "bordercolor",
+                            "group":"Border",
+                            "customLabel" : "Color",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multifields.select",
+                            "propsName": "border radius",
+                            "group":"BorderRadius",
+                            "customLabel" : "Border Radius",
+                            "apiCallToFetchOption": "BorderRadius",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multifields.input",
+                            "propsName": "top",
+                            "group":"BorderRadius",
+                            "inputType": "number",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multifields.input",
+                            "propsName": "right",
+                            "group":"BorderRadius",
+                            "inputType": "number",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multifields.input",
+                            "propsName": "bottom",
+                            "group":"BorderRadius",
+                            "inputType": "number",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multifields.input",
+                            "propsName": "left",
+                            "group":"BorderRadius",
+                            "inputType": "number",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multifields.input",
+                            "propsName": "x",
+                            "group":"Box Shadow",
+                            "inputType": "number",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multifields.input",
+                            "propsName": "y",
+                            "group":"Box Shadow",
+                            "inputType": "number",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multifields.input",
+                            "propsName": "blur",
+                            "group":"Box Shadow",
+                            "inputType": "number",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multifields.input",
+                            "propsName": "spread",
+                            "group":"Box Shadow",
+                            "inputType": "number",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "color-picker",
+                            "propsName": "color",
+                            "group":"Box Shadow",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multibuttongroup",
+                            "propsName": "display",
+                            "apiCallToFetchOption": "displayScreen",
+                            "buttonGroupType": "display",
+                            "required": false
+                        }
+                    ]
+                },
+                {
+                    "label": "Link",
+                    "icon": "icon-Link",
+                    "type": "jsx",
+                    "element": "Link",
+                    "props": {
+                        "link": "https://spademo.ewizsaas.com",
+                        "title": "Test link",
+                        "name": "Test link",
+                        "target": "_self",
+                        "text color": "#000000",
+                        "display":["desktop","tablet","mobile"]
+                    },
+                    "elementConfig": [
+                        {
+                            "fieldType": "input",
+                            "propsName": "link",
+                            "inputType": "url",
+                            "required": true
+                        },
+                        {
+                            "fieldType": "input",
+                            "propsName": "title",
+                            "inputType": "text",
+                            "required": true
+                        },
+                        {
+                            "fieldType": "input",
+                            "propsName": "name",
+                            "inputType": "text",
+                            "required": true
+                        },
+                        {
+                            "fieldType": "select",
+                            "propsName": "target",
+                            "apiCallToFetchOption": "Links",
+                            "required": true
+                        },
+                        {
+                            "fieldType": "color-picker",
+                            "propsName": "text color",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multibuttongroup",
+                            "propsName": "display",
+                            "apiCallToFetchOption": "displayScreen",
+                            "buttonGroupType": "display",
+                            "required": false
+                        }
+                        
+                    ]
+                },
+                {
+                    "label": "Button",
+                    "icon": "icon-CTA-1",
+                    "element": "Button",
+                    "type": "jsx",
+                    "props": {
+                        "type": "button",
+                        "link": "",
+                        "name": "Click Me",
+                        "text color": "#ffffff",
+                        "background color":"#2196f3",
+                        "display": ["desktop","tablet","mobile"]
+                    },
+                    "elementConfig": [
+                        {
+                            "fieldType": "input",
+                            "propsName": "link",
+                            "inputType": "url",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "select",
+                            "propsName": "type",
+                            "apiCallToFetchOption": "Buttons",
+                            "required": true
+                        },
+                        {
+                            "fieldType": "input",
+                            "propsName": "name",
+                            "inputType": "text",
+                            "required": true
+                        },
+                        {
+                            "fieldType": "color-picker",
+                            "propsName": "text color",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "color-picker",
+                            "propsName": "background color",
+                            "required": false
+                        },
+                        {
+                            "fieldType": "multibuttongroup",
+                            "propsName": "display",
+                            "apiCallToFetchOption": "displayScreen",
+                            "buttonGroupType": "display",
+                            "required": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

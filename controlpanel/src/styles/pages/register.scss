@@ -1,0 +1,309 @@
+@import "../mixins";
+
+/************************************Form-section*********************************************/
+
+.input-group {
+    &.has-prepend-text {
+        display: flex;
+        flex-wrap: nowrap !important;
+    }
+}
+
+.form-helper-text {
+    max-width: 450px;
+    margin-top: 8px;
+}
+
+
+/*********************************Buttons****************************************************/
+
+.form-section-action {
+    margin-top: 25px;
+    max-width: 450px;
+
+    .btnSubmit,
+    .btn_login,
+    .forgot_pw {
+        width: 100%;
+    }
+
+    .login_btn,
+    .signup_btn,
+    .btn_signup {
+        margin-top: 14px;
+        width: 100%;
+
+        &:hover,
+        &:focus,
+        &.active {
+            outline: none;
+            box-shadow: none;
+            text-decoration: none;
+        }
+    }
+}
+
+
+/*******************************************************************************************/
+
+.react-login-page,
+.React-register-page {
+    margin-bottom: 45px;
+}
+
+.formUserRegister,
+.ResetPasswordWrapper,
+.userContactUsForm {
+    margin-bottom: 15px;
+}
+
+.registerForm {
+    @include media-max(lg) {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .page-header {
+        .form-section-info {
+            .mandatory {
+                color: #ff0000;
+            }
+        }
+    }
+}
+
+.regformImage {
+    display: none;
+}
+
+
+/*wishlist page*/
+
+//#wishlistlp{margin-top:35px;}
+
+/*common css for my account pages*/
+
+.wrapperDiv {
+    display: flex;
+    margin-bottom: 45px;
+    row-gap: 15px;
+
+    @include media-max(sm) {
+        flex-direction: column;
+    }
+
+    #myAccountMenu {
+        flex: 0 0 200px;
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        @include media-max(sm) {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        @include media-max(xs) {
+            display: none;
+        }
+
+        .links {
+            display: flex;
+            align-items: flex-end;
+            column-gap: 10px;
+            font-size: 14px;
+
+            i {
+                font-size: 16px;
+                width: 22px;
+                height: 22px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+            }
+
+            &.active {
+                font-weight: 700;
+                font-size: 16px;
+
+                i {
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    #content {
+        flex: 1 1 auto;
+        max-width: calc(100% - 200px);
+        justify-content: flex-end;
+        background: #f2f2f2;
+        border-radius: 12px;
+        padding: 20px 20px 30px;
+
+        @include media-max(sm) {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+
+/*wishlistpage*/
+
+.wishlistWrapper {
+    display: flex;
+    gap: 15px;
+
+    @include media-max(sm) {
+        flex-direction: column;
+    }
+
+    aside {
+        flex: 0 0 200px;
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-height: 60vh;
+        overflow-y: auto;
+        padding-right: 20px;
+
+        @include media-max(sm) {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding-right: 0;
+            max-height: 30vh;
+        }
+        @include media-max(xs) {
+            display: none;
+        }
+
+        a {
+            word-wrap: break-word;
+            line-height: 18px;
+
+            &.active {
+                font-weight: 700 !important;
+                font-size: 16px !important;
+            }
+        }
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #c8c8c8;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    }
+
+    #wishlistProductWrapper {
+        flex: 1 1 auto;
+        max-width: calc(100% - 200px);
+
+        @include media-max(sm) {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .product-price {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.contactFormWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 10px 15px;
+    margin-bottom: 25px;
+
+    >div label {
+        display: block !important;
+        margin-bottom: 0;
+    }
+
+    .input-Extension {
+        label {
+            &:after {
+                content: none!important;
+            }
+        }
+    }
+}
+
+.btnSubmit {
+    font-size: 1.0106666667rem;
+    font-weight: var(--font-weight-bold);
+    background-image: var(--theme-btn);
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.4;
+    border: 1px solid var(--clr_7);
+    padding: 8px 10px;
+    border-radius: 4px;
+    color: var(--clr-white);
+    transition: 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    letter-spacing: 1.1px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.userContactUsForm {
+    form {
+        .form-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 10px 15px;
+            margin-bottom: 25px;
+
+            >div label {
+                display: block !important;
+                margin-bottom: 0;
+            }
+
+            .input-Extension {
+                label {
+                    &:after {
+                        content: none!important;
+                    }
+                }
+            }
+
+            .contactFormWrapper.checkboxContent {
+                display: flex;
+                align-items: center;
+                column-gap: 15px;
+            }
+        }
+    }
+}
+
+.editProfileWrapper {
+    .mandatory {
+        color: #ff0000;
+    }
+}

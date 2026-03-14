@@ -1,0 +1,734 @@
+@import "../mixins";
+//  ====================== DETAIL PAGE CSS START =========================
+
+.product-image {
+    position: relative;
+    display: flex;
+
+    @include media-max(md) {
+        margin-bottom: 20px;
+    }
+}
+
+.details-page .product-image {
+    div#myresult {
+        opacity: 0;
+        border: 1px solid #d4d4d4;
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        background: #fff;
+        z-index: -10;
+
+        @include media-max(md) {
+            display: none;
+        }
+    }
+
+    .pen-color-img {
+        .img-zoom-lens {
+            position: absolute;
+            border: 3px solid #d4d4d4;
+            width: 100px;
+            height: 100px;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.2s;
+
+            @include media-max(md) {
+                display: none;
+            }
+        }
+
+        &:hover {
+            .img-zoom-lens {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            &+div#myresult {
+                opacity: 1;
+                visibility: visible;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+.action-box {
+    display: flex;
+    position: absolute;
+    right: 0;
+
+    .action-icon {
+        .icon {
+            font-size: 25px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: linear-gradient(180deg, #21c07b 0%, #02a36b 50%, #21c07b 100%);
+
+            i {
+                color: var(--clr-white);
+            }
+        }
+    }
+}
+
+.detail-content {
+    .prodCode {
+        h5 {
+            color: #999999;
+            font-size: 1.14286rem;
+            font-weight: bold;
+            letter-spacing: -0.04px;
+            line-height: 22px;
+        }
+    }
+}
+
+.detail-title {
+    h1 {
+        color: #333;
+        font-size: 1.71429rem;
+        letter-spacing: 0;
+        line-height: 32px;
+        margin: 10px 0;
+        text-transform: capitalize;
+    }
+}
+
+.product-rating {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #C6C6C6;
+
+    i {
+        color: #EBC117;
+    }
+
+    a {
+        color: #1C65D3;
+        transition: 0.3s;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: -0.03px;
+        line-height: 19px;
+        cursor: pointer;
+    }
+}
+
+// table css start
+
+.product-pricing {
+    table {
+        border: 1px solid #C6C6C6;
+        font-size: 1.14286rem;
+
+        tr {
+            border: 0;
+
+            th {
+                text-align: left;
+                border-right: 1px solid #C6C6C6;
+                font-size: 1.14286rem;
+            }
+
+            td {
+                border-right: 1px solid #C6C6C6;
+                padding: 0.5rem 0.75rem;
+                border-top: 0;
+                font-size: 1.14286rem;
+            }
+        }
+    }
+}
+
+.callForPricing {
+    line-height: 1.5; font-weight: 500; color: var(--main-color); margin: 15px 0;
+
+    & + .minQuantity { display: none; }
+}
+
+
+.table {
+    width: 100%;
+    background-color: transparent;
+
+    th {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    td {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.img-size {
+    width: 200px;
+}
+
+.high-res-image-container {
+    justify-content: space-evenly;
+}
+
+.note-text {
+    margin-bottom: 10px;
+
+    span {
+        color: red;
+    }
+
+    p {
+        color: #333;
+        font-size: px-to-rem(14);
+        font-weight: 600;
+        line-height: 18px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+// ==========================ACTIONS HOVER CSS START============================
+
+.actions-hover {
+    flex-wrap: wrap;
+
+    .icon {
+        @include media-max(mini-tab) {
+            margin-left: -1px;
+        }
+        margin-bottom: 30px;
+
+        &:first-child {
+            &::before {
+                background-color: transparent;
+
+                @include media-max(mini-tab) {
+                    background-color: #979797;
+                }
+            }
+        }
+
+        text-align: center;
+        transform: translateZ(0);
+        cursor: pointer;
+        padding: 0 20px;
+
+        &::before {
+            content: '';
+            left: 0px;
+            right: auto;
+            width: 1px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #979797;
+        }
+
+        &::after {
+            content: none;
+            right: 0px;
+            left: auto;
+            width: 1px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #979797;
+            
+            @include media-max(mini-tab) {
+                content: '' !important;
+                margin-left: -1px;
+            }
+        }
+
+        &:hover {
+            .icons-img {
+                animation-name: hvr-icon-up;
+                animation-duration: 0.75s;
+                animation-timing-function: ease-out;
+
+                i {
+                    color: #21C07B;
+                }
+            }
+
+            p {
+                color: #21C07B;
+            }
+        }
+
+        i {
+            font-size: 2.14286rem;
+            margin-bottom: 10px;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        p {
+            color: var(--clr-black);
+            font-size: 0.9rem;
+            font-weight: bold;
+            letter-spacing: -0.1px;
+            line-height: 18px;
+            transition: 0.3s;
+            width: 90px;
+            margin: auto;
+        }
+    }
+}
+
+.reviewlist {
+    display: flex;
+    border: 1px solid #C6C6C6;
+
+    .image-date-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 15px;
+
+        .image {
+            width: auto !important;
+            margin-right: 10px;
+            padding-right: 15px;
+        }
+
+        .review-date span {
+            font-size: .92857rem;
+            letter-spacing: -0.03px;
+            line-height: 18px;
+        }
+
+        i.fa.fa-star-half-o {
+            color: #EBC117;
+        }
+    }
+
+    .content {
+        padding: 15px;
+        border-left: 1px solid #C6C6C6;
+        margin-left: 20px;
+        display: flex;
+        -webkit-box-orient: vertical;
+        flex: 1;
+        flex-flow: column;
+        flex-direction: normal;
+
+        .heading.review-heading {
+            font-size: .92857rem;
+            font-weight: bold;
+            letter-spacing: -0.03px;
+            line-height: 18px;
+            margin-bottom: 5px;
+            -webkit-box-ordinal-group: 3;
+        }
+    }
+}
+
+.frequently-bought-withoutslider {
+    .frequently-heading {
+        margin: 0 0 30px 0;
+
+        h3 {
+            font-size: 1.42857rem !important;
+            font-weight: bold;
+            letter-spacing: 1px;
+            line-height: 20px;
+            text-transform: uppercase;
+        }
+    }
+
+    .frequently-body {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+
+        .freq-product {
+            &.remove {
+                &::after {
+                    content: none;
+                }
+            }
+            display: inline-flex;
+            align-items: center;
+            border-right: 1px solid #E3E3E3;
+            padding: 10px 20px;
+            position: relative;
+            background-color: #fff;
+
+            @include media-max(xs) {
+                border-right: none;
+                border-bottom: 1px solid #E3E3E3;
+            }
+
+            .freq-img {
+                flex: 0 0 30%;
+                max-width: 30%;
+            }
+
+            .freq-product-data {
+                flex: 0 0 70%;
+                padding-left: 30px;
+                margin-top: 15px;
+                max-width: 70%;
+
+                a.product-name {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    max-width: 100%;
+                    display: block;
+                    color: #000000;
+                    font-weight: 300 !important;
+                    font-size: 1rem;
+                    width: 235px;
+                }
+
+                .price-wrap {
+                    color: #1b75ad;
+                    letter-spacing: 0.6px;
+                    font-size: .85714rem;
+                    text-transform: uppercase;
+                    min-height: 45px;
+                    font-weight: 700;
+                    margin-top: 5px;
+                }
+            }
+
+            &:after {
+                content: '+';
+                position: absolute;
+                top: 50%;
+                right: -12px;
+                transform: translateY(-50%);
+                background-color: #fff;
+                z-index: 1;
+                color: #1B75AD;
+                font-size: 2.14286rem;
+
+                @include media-max(xs) {
+                    transform: translateY(auto);
+                    transform: translateX(-50%);
+                    right: auto;
+                    bottom: -15px;
+                    top: auto;
+                    left: 50%;
+                }
+            }
+        }
+
+        .freq-totalprice {
+            background-image: linear-gradient(171deg, #1EBD78 0%, #03A46B 100%);
+            display: flex;
+            align-content: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            height: 100%;
+
+            h6 {
+                margin: 0;
+                color: #fff;
+                font-size: 1rem;
+                text-transform: uppercase;
+                letter-spacing: 1.6px;
+                line-height: 36px;
+                flex: 0 0 100%;
+                text-align: center;
+            }
+
+            h5 {
+                color: #fff;
+                font-size: 1.14286rem;
+                letter-spacing: 2.4px;
+                text-transform: uppercase;
+                line-height: 36px;
+                flex: 0 0 100%;
+                text-align: center;
+                font-weight: 700;
+            }
+        }
+
+        .freq-savewishlist {
+            @include media-max(xs) {
+                margin-top: 20px;
+            }
+
+            .icon {
+                // font-family: "ewiz" !important;
+                color: #fff;
+                text-align: center;
+                border-radius: 50px;
+                min-height: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+                background-image: linear-gradient(180deg, #3285b9 0%, #1b75ad 100%);
+                min-width: 40px;
+                width: 40px;
+                line-height: 40px;
+            }
+
+            button {
+                background: 0;
+                border: 0;
+                font-size: 13px;
+                position: relative;
+                padding-left: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// ================================ =TAB CSS START ==============================
+
+.tabs-titles {
+    color: #444;
+    display: inline-block;
+    padding-bottom: 10px;
+    cursor: pointer;
+    margin: 0 30px 0 1px;
+    font-size: 30px;
+    position: relative;
+    font-weight: 400;
+}
+
+.tab-title {
+    display: inline-block;
+    margin: 0 30px;
+    padding-bottom: 10px;
+    color: #000;
+    cursor: pointer;
+    margin-left: 1px;
+    font-size: 22px;
+    position: relative;
+    font-weight: 700;
+}
+
+.tab-title--active {
+    pointer-events: none;
+    color: #3285b9;
+
+    &::before {
+        content: "";
+        border-bottom: 2px solid #3285b9;
+        position: absolute;
+        width: 100%;
+        bottom: -1px;
+        left: 0;
+        transition: all 0.5s ease;
+    }
+}
+
+.tab-content {
+    margin: 0;
+}
+
+.tab-title-name-disable {
+    .title-main-wrapper {
+        .list-title {
+            display: none
+        }
+    }
+
+    &[data-show="false"] {
+        display: none;
+    }
+}
+
+.tab-title-viewAll-disable {
+    .title-main-wrapper {
+        .list-title {
+            a {
+                display: none
+            }
+        }
+    }
+}
+
+.mediaImageHeading {
+    margin-left: 210px;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+.hide-Wishlist-detail {
+    display: none;
+}
+
+.card-quantity {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+
+/*********** product detail page email popup css*************/
+
+#productDetailsPage .rSide .detail-content {
+    .iconMail {
+        #Email {
+            .dialog-body {
+                .productHeading {
+                    >div {
+                        .page-header {
+                            text-align: center;
+                            margin-bottom: 20px;
+                        }
+
+                        .modal-title {
+                            text-align: left;
+                            font-size: 24px;
+                            color: #333;
+                        }
+                    }
+
+                    .mandatInfo {
+                        display: flex;
+                        margin: 5px 0;
+                        position: relative;
+                        margin-bottom: 20px;
+
+                        .redMandat {
+                            padding: 0 3px;
+                        }
+
+                        &::before {
+                            content: "";
+                            height: 1px;
+                            background: #C1C1C1;
+                            position: absolute;
+                            left: 0;
+                            bottom: -5px;
+                            width: 100%;
+                        }
+
+                        &::after {
+                            content: "";
+                            height: 3px;
+                            background: var(--main-color);
+                            position: absolute;
+                            left: 0;
+                            bottom: -5px;
+                            width: 60px;
+                        }
+                    }
+
+                    button.close {
+                        background: var(--main-color);
+                        display: flex;
+                        padding: 5px;
+                        align-items: center;
+                        justify-content: center;
+                        opacity: 1;
+
+                        span.icon-close {
+                            font-size: 10px;
+
+                            &::before {
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .addRec {
+                        position: relative;
+                        .close{
+                            position: absolute;
+                            top: 0;
+                            right: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**************freight estimator design changes***********/
+
+#FreightEstimator .dialog-body form .p-3 {
+    padding-bottom: 0 !important;
+    div {
+        &:first-child {
+            .mandatInfo {
+                display: flex;
+
+                .redMandat {
+                    padding: 0 3px;
+                }
+            }
+        }
+
+        div:last-child {
+            .form-group.required {
+                label {
+                    &::before { display: none; }
+
+                    &::after { content: "*"; }
+                }
+            }
+        }
+    }
+}
+
+#EstimatorData {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.contctForFreight {
+    font-size: px-to-rem(20) !important;
+    line-height: 1;
+    font-weight: 500;
+}
+
+@media print {
+    .headerTopWrap,
+    .headerBottomWrap,
+    .iconPrint,
+    footer {
+        display: none!important;
+    }
+
+    button.btn-primary {
+        position: relative;
+        overflow: hidden;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+        align-items: center;
+        font-size: 1rem;
+        letter-spacing: 1.6px;
+        background-image: linear-gradient(180deg, var(--main-color) 0%, var(--main-color) 50%, var(--main-color) 100%);
+        color: #fff;
+        transition: all 0.8s ease-in;
+        font-weight: 700;
+        outline: none;
+        text-shadow: none !important;
+        border-color: transparent;
+    }
+}
+

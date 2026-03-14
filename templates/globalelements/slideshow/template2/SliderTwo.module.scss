@@ -1,0 +1,46 @@
+@import "../../styles/mixins";
+
+
+/****************slider show dots design*************/
+.homepageSlider {
+    :global{
+    .slides-container {
+        position: relative;
+    }
+    .swiper-pagination {
+        position: absolute;
+            bottom: 30px;
+            transform: translateX(-50%);
+            left: 50%;
+            @include media-max(sm){
+                bottom: 12px;
+            }
+            z-index: 10;
+        .swiper-pagination-bullet {
+                height: 8px;
+                width: 8px;
+                background-color: #fff !important;
+                border: 1px solid #fff !important;
+                margin-right: 20px;
+                &::after{
+                    border: 1px solid #fff !important;
+                    height: 14px !important;
+                    width: 14px !important;
+                }
+                &:last-child{margin-right: 0;}
+                &.swiper-pagination-bullet-active{
+                    &::after{
+                        content: "";
+                        height: 12px;
+                        width: 12px;
+                        border: 1px solid var(--clr-black);
+                        border-radius: 50%;
+                        position: absolute;
+                        top: -3px;
+                        left: -3px;
+                    }
+                }
+        }
+    }
+    }
+}

@@ -1,0 +1,158 @@
+@import "../mixins";
+// ////////////////////////////////// ABOUT US PAGE CSS START //////////////////////
+
+.static-content {
+    line-height: 1.5;
+
+    img.img-fluid {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+        line-height: 32px;
+        letter-spacing: 0.06px;
+        color: #333;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: .9375rem;
+        letter-spacing: 0.06px;
+        color: #333;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+        line-height: 28px;
+        letter-spacing: 0.06px;
+        color: #333;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    ul {
+        padding-left: 25px;
+        list-style: disc;
+        margin-bottom: 15px;
+        font-size: .9375rem;
+    }
+}
+
+.accordionTitle {
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.accordionTitle + .accordionContent {
+    display: none;
+}
+
+.accordionTitle.is-open + .accordionContent {
+    display: block;
+}
+
+  
+// ///////////////////////////////// ABOUT US PAGE CSS END /////////////////////
+/*****************benefit page css***************/
+
+.benefitpage_cont {
+    >h1.page-heading {
+        margin-bottom: 20px !important;
+    }
+
+    .statpagelghrhs_cont {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px 0;
+
+        div {
+            width: 50%;
+
+            @media(max-width: 991px) {
+                width: 100%;
+            }
+
+            &.benepgeimg {
+                &.contentend {
+                    text-align: right;
+
+                    @media (max-width: 991px) {
+                        text-align: center;
+                    }
+                }
+
+                @media (max-width: 991px) {
+                    text-align: center;
+                }
+
+                img { width: 80%; }
+                
+            }
+
+            &.benepgecontent {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+
+                .page-heading span {
+                    font-size: 50px !important;
+                    font-weight: 600;
+
+                    @include media-max(iphone) {
+                        font-size: 38px !important;
+                    }
+                }
+
+                .subpage-heading {
+                    font-size: 30px;
+                    color: #444;
+                    font-weight: 400;
+                    font-family: 'Poppins';
+                    line-height: 45px;
+                }
+
+                p {
+                    font-size: 16px;
+                    color: #777;
+                    font-weight: 400;
+                    font-family: 'Poppins';
+                    line-height: 34px;
+                }
+            }
+        }
+
+        &.rightimgbenecont {
+            .benepgecontent {
+                @media(max-width: 991px) { order: 1; }
+
+                p { padding-right: 30px; }
+            }
+        }
+    }
+
+    .notecontent {
+        margin-bottom: 40px;
+
+        p {
+            font-size: 16px;
+            font-weight: 500;
+            color: #444;
+        }
+    }
+}
+/************terms and condition page css***********/
+
+._tncWrap_nfqyq_2.staticContent {
+    p {
+        font-size: .9375rem !important;
+        letter-spacing: 0;
+    }
+}

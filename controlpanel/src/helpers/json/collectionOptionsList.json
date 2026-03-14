@@ -1,0 +1,18 @@
+{
+    "data":[
+    {
+        "alias": "NEWARRIVALS",
+        "name": "New Arrival",
+        "type": "Section"
+    },
+    {
+        "alias": "Onedaydeliveryproduct",
+        "name": "One day delivery product",
+        "type": "Section"
+    },
+    {
+        "alias": "accessories1",
+        "name": "Accessories",
+        "type": "Category"
+    }
+]}

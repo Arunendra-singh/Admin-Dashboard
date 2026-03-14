@@ -1,0 +1,15 @@
+@import "../mixins";
+
+
+dialog[data-shm] .dialog-footer button:last-child,
+dialog[shm] .dialog-footer button:last-child,
+dialog[data-pos] .dialog-footer button:last-child {
+    display: block !important;
+}
+
+dialog[data-shm] .dialog-body,
+dialog[shm] .dialog-body,
+dialog[data-pos] .dialog-body {
+    padding: 15px 10px;
+    font-size: 14px;
+}

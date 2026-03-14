@@ -1,0 +1,139 @@
+@import "../../../styles/mixins";
+.purchaseOrderReport.purchaseSampleReport{
+    .search-bar{
+        @include media-max(md){ margin-top: 40px !important; }
+        @media(max-width: 767px){ margin-top: 50px !important; }
+
+        .search-bar-controls{
+            .header-second{width: 100%;flex-wrap: initial;
+                @include media-max(md){display: initial;margin-top: 50px;}
+                .searchBox_Sect{display: none !important;}
+                .date-input-wrapper>input{width: 50%;
+                    border-radius: 6px;
+                }
+                .date-input-wrapper{
+                    @include media-max(md){width: 100%;border: none;}
+                    input{
+                        @include media-max(md){min-width: 102px;margin-right: 5px;        border: 1px solid #ccd3d6;
+                            border-radius: 6px;
+                        }
+                        @include media-max(){min-width: 102px;}
+                    }
+                }
+                
+                justify-content: initial;
+                @include media-max(md){flex-wrap: wrap;}
+                .searchBox_Sect{display: none !important;}
+                .date-input-wrapper.cus_wid{width: 25%;
+                    @include media-max(md){width: 100%;}
+                }
+                .search-bar-buttons {
+                    justify-content: right;
+                    right: 25px;
+                    position: absolute;
+                    @include media-max(md){position: initial;}
+                }
+            }
+        }
+    }
+    .all_user .table.dataTable thead td.tblTitle:nth-child(1){
+        width: inherit;
+    }
+    .action.PaymentAction {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        button.tblbtn-icon.icon-editNew{
+            line-height: 0;
+        }
+        button.tblbtn-icon.icon-editNew:hover{
+            background-color: #0e97e7;color: #fff;
+            border-radius: 50%;
+            transform: translate(2%);padding:5px 6px;
+            &::after{display: none;}
+        }
+    }
+    .reportViewPopup{padding: 0;
+        .title-info{display: flex;justify-content: space-between;padding: 10px 20px;    border-bottom: 1px solid #e8e8e8;
+            .close{position: initial;}
+        }
+        .tblData{    padding: 0 20px;
+            overflow-y: scroll;
+            height: calc(100vh - 150px);
+            .order-details-table{
+                tbody{
+                    .headingPurchase{    font-size: 20px;
+                        font-weight: 600;
+                        margin: 15px 0;
+                    }
+                    tr {
+                        td{width: 100%;}
+                    }
+                    .firstSec{
+
+                    }
+                    .thirdSec, .Instructions{
+                        tr{
+                            td{    background-color: #f3f9ff;
+                                border-bottom: 1px solid #cddae7;
+                                color: #36c;
+                                font-weight: 700;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    .Instructions{margin-bottom: 10px;}
+                    
+                }
+            }
+        }
+    }
+    .table-bordered thead{
+        background: transparent !important;
+    }
+    table{
+        thead{
+            tr{
+                td.tblTitle.company-name{text-align: center;}
+            }
+        }
+        tbody{
+            tr{
+                .tblRowtd.company-name{text-align: center !important;}
+            }
+        }
+    }
+
+    .firstSec {
+        position: relative;
+        margin-top: 21px;
+    }
+    
+    .tblData .order-details-table tbody tr td:nth-child(2){
+        width: 30%;
+    }
+
+   
+    .popup-content.reportViewPopup { 
+        @supports (-moz-appearance: none) {
+          .left-sidebar .Main-menubar ul.submenu,
+          .tableBody {
+            scrollbar-width: thin;
+            scrollbar-color: #078d99 #f5f5f5;
+          }
+        }
+    }
+
+    .all_user .table.dataTable thead td.tblTitle:nth-child(1){
+        width: 18%;
+    }
+    .all_user .table.dataTable thead td.tblTitle:nth-child(2){
+        width: 22%;
+    }
+
+    table thead tr td.tblTitle.company-name,
+    table tbody tr .tblRowtd.company-name{
+        text-align: left !important;
+    }
+}

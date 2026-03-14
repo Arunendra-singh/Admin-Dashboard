@@ -1,0 +1,158 @@
+$cdn: 'https://d207zvy2rsg5b5.cloudfront.net';
+$websiteGuid: '764099A2-B67E-49A6-85B4-034937726CAA';
+$fontPath: '#{$cdn}/#{$websiteGuid}/css/fonts';
+$staticImagePath: '#{$cdn}/#{$websiteGuid}/StaticImages';
+
+@import "mixins";
+@import "third-party/bootstrap-4.1.3";
+@import "vars";
+@import "reset";
+@import "overrides";
+@import "pbicons";
+@import "icons";
+@import "fonts";
+@import "layout/header";
+
+label {
+    font-size: var(--font-body-size);
+    font-weight: var(--font-weight-medium);
+    color: var(--txt-color);
+    line-height: var(--font-body-lineheight);
+    letter-spacing: 0.32px;
+    margin: 0 0 8px;
+    padding: 0;
+    text-transform: capitalize;
+    width: 100%;
+}
+
+dialog[data-shm],
+dialog[data-pos] {
+    width: 500px;
+    padding: 0;
+    border: 0;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+    overflow: unset !important;
+
+    .dialog-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background: var(--color-secondary-700);
+        position: relative;
+
+        .dialog-title {
+            margin: 0;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        button.close {
+            color: var(--clr-white) !important;
+            text-shadow: none;
+            opacity: 1 !important;
+            font-weight: 500 !important;
+            display: flex;
+            align-items: center;
+            height: 16px;
+            width: 16px;
+            justify-content: center;
+            font-size: 28px !important;
+            background-color: transparent;
+
+            .icon-close {
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            &:focus,
+            &.active {
+                box-shadow: none;
+                outline: none;
+            }
+        }
+    }
+
+    .dialog-footer {
+        padding: 10px;
+        display: flex;
+        justify-content: flex-end;
+        column-gap: 10px;
+
+        button {
+            @include btnMixinHover();
+            border-radius: 5px;
+            width: fit-content;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    }
+
+    .dialog-body {
+        background: #FFFFFF !important;
+        padding: 15px;
+        overflow-y: auto !important;
+        max-height: 80vh;
+        height: auto;
+        font-size: 14px;
+        scrollbar-width: thin;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #c8c8c8;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+
+            .label {
+                margin-bottom: 0 !important;
+                flex: 0 0 200px;
+                max-width: 200px;
+            }
+
+            .fieldWrapper {
+                flex: 1 1 auto;
+            }
+        }
+    }
+
+    &::backdrop {
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    &.notification {
+        max-width: 250px;
+
+        .dialog-header,
+        .dialog-footer {
+            display: none;
+        }
+    }
+
+    &.noFooter .dialog-footer {
+        display: none;
+    }
+
+    &[data-pos="3"] {
+        margin: 10px 10px auto auto;
+    }
+}
+
+img {
+    max-width: 100%;
+}

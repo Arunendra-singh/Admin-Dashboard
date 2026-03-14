@@ -1,0 +1,36 @@
+common
+    -hooks\react
+        -api
+            --index.ts (modified)
+            --useGetAllQuestions
+            --useSaveQuestionAnswerData;
+            --useDeleteQA;
+            --useGetQaCategoryBaseProduct;
+            --useGetEditQAData.ts
+            --useGetQaMapProduct.tsx
+            --useGetProductSKUs.tsx
+            --useSaveQAProductMapping
+
+    -types\api
+        --IDeleteQAItem.ts
+        --IGetAllQaCategory.ts
+        --IGetAllQaCategoryProducts.ts
+        --IGetAllQuestions.ts
+        --IProductQuestionMappingSave.ts
+        
+control panel
+    -src
+        -components
+            --common
+                --DataTable (full folder)
+            --QuestionAnswer (full folder)
+            -- layout
+                -- header / header.jsx (modified)
+            -- take a tour
+                --StartIntroComponent (modified)
+        -helpers
+            -- json
+                --choicesOptionsList.json
+        -navigation / index.jsx (modified)
+        -Pages
+            --QuestionAnswer (full folder)

@@ -1,0 +1,922 @@
+@import "../mixins";
+
+@mixin smallBtn {
+    flex: 0 0 70px;
+    max-width: 70px;
+    border-radius: 16px;
+    padding: 10px 0;
+    border: 1px solid #c7c7c7;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--txt-color);
+    background: #e9ecef;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    &:focus,
+    &.active {
+        outline: 0;
+        box-shadow: none;
+    }
+}
+@mixin customisedCard {
+    flex: 1;
+    padding: 0px 18px 14px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    background: var(--clr-white);
+    border-radius: 4px;
+}
+
+input[type="radio"] {
+    accent-color: var(--txt-color);
+    cursor: pointer;
+}
+
+.orderSampleReport {
+    @include media-max(xs) {
+        padding: 0 15px;
+    }
+}
+
+
+/*subscription page*/
+
+.mySubscriptions {
+    @include media-max(xs) {
+        padding: 0 15px;
+    }
+}
+
+.paymentMethodList {
+    margin-bottom: 0;
+
+    .label {
+        font-weight: var(--font-weight-bold) !important;
+    }
+
+    .paymentOptions {
+        label {
+            display: flex;
+            column-gap: 10px;
+            cursor: pointer;
+            font-weight: var(--font-weight-bold)!important;
+        }
+    }
+}
+
+
+/*my account static page css*/
+
+.account-main-div .page-heading {
+    margin: 0;
+    color: var(--txt-color);
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-body-lineheight);
+    letter-spacing: 0.8px;
+}
+
+.account-options-main-div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    row-gap: 30px;
+    column-gap: 15px;
+    margin: 30px 0 45px;
+
+    &>li {
+        border-radius: 10px;
+        padding: 16px;
+        box-shadow: 0 2px 8px #0000001f;
+    }
+
+    &>.My-Quote-Report,
+    .My-Order-Sample-Report {
+        display: none;
+    }
+
+    .single-account-card {
+        padding: 10px;
+
+        span {
+            font-size: 20px;
+        }
+
+        h2 {
+            margin: 8px 0;
+            color: var(--txt-color);
+            font-weight: var(--font-weight-bold);
+            line-height: var(--font-body-lineheight);
+            letter-spacing: 0.8px;
+            font-size: 24px;
+        }
+
+        p {
+            margin: 8px 0;
+            line-height: 22px;
+
+            @include media-max(xs) {
+                font-size: calc(var(--font-body-size) + 2px);
+            }
+        }
+    }
+}
+
+#addAmountForm .input-inAddAmount,
+#addAmountForm {
+    .form-helper-text {
+        position: relative;
+
+        @include media-min(xs) {
+            position: absolute !important;
+        }
+    }
+}
+
+
+/*my wallet*/
+
+.card-body {
+    .amountBalance {
+        font-size: 16px;
+        font-weight: 700;
+        display: flex;
+        column-gap: 10px;
+    }
+
+    .label {
+        font-weight: var(--font-weight-bold);
+    }
+
+    .quickAddAmount {
+        display: flex;
+        column-gap: 10px;
+        row-gap: 10px;
+        align-items: flex-start;
+        position: relative;
+
+        @include media-max(xs) {
+            flex-wrap: wrap;
+        }
+
+        .addQuickAmount {
+            @include smallBtn();
+        }
+
+        .input-GiftAmount [role="alert"] {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: -5px;
+        }
+
+        .input-inAddAmount {
+            flex: 1 1 auto;
+
+            .input-group {
+                height: 36px;
+            }
+
+            .input-group-text {
+                font-size: var(--font-body-size);
+                color: var(--txt-color);
+            }
+
+            input {
+                border-radius: 0 5px 5px 0 !important;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+.card-footer {
+    background: var(--clr-white);
+
+    .addAmountToWallet {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 5px 0;
+
+        button {
+            width: 220px;
+            padding: 5px 0;
+            font-weight: var(--font-weight-medium);
+        }
+    }
+}
+
+.transactionWrapper {
+    padding: 20px 0 0 0;
+
+    .transationList {
+        display: flex;
+        column-gap: 30px;
+        cursor: pointer;
+        line-height: var(--font-body-lineheight);
+
+        &>div {
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: capitalize;
+
+            &.active,
+            &:focus {
+                font-weight: 700;
+                border-bottom: 2px solid #232323;
+            }
+        }
+    }
+
+    .transactionDetails {
+        padding-top: 20px;
+        color: var(--txt-color);
+
+        .table-responsive {
+            overflow: auto!important;
+        }
+    }
+}
+
+.completeYourPayment {
+    .userDetails {
+        .text {
+            font-size: 16px;
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+
+        button {
+            padding: 5px 0;
+            width: 80px;
+            cursor: pointer;
+        }
+    }
+
+    .paymentDetails {
+        text-transform: capitalize;
+
+        .payment-items {
+            margin-bottom: 16px;
+        }
+
+        .paymentTitle {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .paymentAmount {
+            display: flex;
+            column-gap: 10px;
+        }
+    }
+
+    .finalTotal {
+        .paymentAmount {
+            display: flex;
+            column-gap: 10px;
+        }
+    }
+
+    .completeOrder {
+        border-radius: 0;
+        margin-top: 25px;
+        width: 220px;
+    }
+}
+
+
+/*order report*/
+
+.searchInputButton {
+    display: flex;
+    align-items: flex-end;
+    row-gap: 8px;
+    column-gap: 8px;
+    border: 1px solid var(--border-bottom-clr);
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 2px;
+    margin-top: 10px;
+
+    @include media-max(lg) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filterInput {
+        display: flex;
+        column-gap: 8px;
+        row-gap: 8px;
+        width: 100%;
+
+        .row {
+            width: 100%;
+        }
+
+        @include media-max(xs) {
+            flex-direction: column;
+        }
+
+        .form-group {
+            flex: 1 1 auto;
+
+            input {
+                margin: 0;
+            }
+
+            label {
+                display: block;
+                position: relative;
+                width: auto;
+                height: auto;
+                font-size: 14px;
+                font-weight: bold;
+                letter-spacing: 0.03px;
+                line-height: 19px;
+                margin-bottom: 5px;
+                order: -1;
+            }
+        }
+
+        .inputFrom,
+        .inputTo,
+        .orderId {
+            width: 100%;
+        }
+
+        input {
+            height: 44px;
+        }
+    }
+
+    .filterBtns {
+        // display: flex; gap: 8px; margin-right: 400px;
+        margin-right: auto;
+        margin-left: auto;
+        z-index: 1;
+
+        @include media-max(xs) {
+            max-width: 450px;
+            width: 100%;
+        }
+
+        .btn {
+            // width: 150px; margin-bottom: 15px;
+            margin: 0 15px 0 0;
+            font-size: 1rem;
+            letter-spacing: 1.6px;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-align: center;
+            display: inline-block;
+            transition: all 0.8s ease-in;
+            font-weight: 600;
+
+            @include media-max(xs) {
+                flex: 1;
+            }
+
+            i {
+                text-shadow: none;
+                margin-right: 6px;
+                font-size: 0.9rem;
+                text-rendering: auto;
+                letter-spacing: 1.6px;
+                color: #fff;
+                text-align: center;
+                font-weight: 700;
+                vertical-align: top;
+
+            }
+        }
+
+        .btnSubmit,
+        .btnReset {
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.5rem;
+            background-color: var(--main-color);
+            margin-bottom: 10px;
+            display: inline-block;
+            color: #fff;
+            padding: 15px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            text-transform: inherit;
+            
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+#viewDialogModel-8d1c16ff-f019-4328-a002-596eeef25648 {
+    border: none;
+}
+
+.modal-md {
+    .orderStatus {
+        display: flex;
+        padding: 20px 0;
+
+        .status {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            flex: 1;
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 24px;
+
+            .orderReportIcon {
+                font-size: 36px;
+                font-weight: 500;
+            }
+
+            &.active {
+                color: var(--secondary-color);
+            }
+        }
+    }
+}
+
+.dialog-header {
+    .dialog-title {
+        font-size: 20px;
+        font-weight: var(--font-weight-bold);
+        margin: 0 !important;
+    }
+}
+
+.viewProductDetails {
+    .orderNumberDate {
+        display: flex;
+        column-gap: 50px;
+    }
+
+    .orderSummary {
+        margin-top: 16px;
+
+        .orderDetails {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            column-gap: 15px;
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            border-radius: 8px;
+            padding: 16px;
+            row-gap: 15px;
+
+            .orderDetail {
+                .orderDetailHeading {
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                    font-weight: 700;
+                }
+
+                .detail {
+                    line-height: 22px;
+
+                    .priceDetails {
+                        margin-bottom: 0 !important;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+
+        .orderStatus {
+            display: flex;
+            padding: 20px 0;
+            align-items: center;
+            font-size: 16px;
+
+            h3.orderDetailHeading {
+                font-size: inherit;
+                font-weight: 600;
+                margin-right: 10px;
+                margin-bottom: 0;
+            }
+
+            .detail {
+                font-size: inherit;
+                text-transform: capitalize;
+            }
+        }
+
+        .productDetails {
+            margin-top: 15px;
+            position: relative;
+
+            .writeProductReview {
+                color: var(--secondary-color);
+                font-size: calc(var(--font-body-size) + 2px);
+                font-weight: var(--font-weight-bold);
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .table {
+                .price,
+                .unitPrice,
+                .totalItems,
+                .totalQty {
+                    text-align: right;
+                }
+            }
+
+            dialog#writeReviewForm-0ff357e2-6a44-48b0-abc0-1831b485114e-0 {
+                width: 500px !important;
+            }
+        }
+    }
+}
+
+
+/*add addreess*/
+
+.addAddress {
+    font-size: 24px;
+    color: var(--txt-color);
+    text-transform: capitalize;
+}
+
+.address-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    row-gap: 30px;
+    column-gap: 15px;
+
+    .address-item-dotted {
+        display: flex;
+        border: 2px dashed #c7c7c7;
+        border-radius: 8px;
+        justify-content: center;
+        align-items: center;
+        background: var(--clr-white);
+        min-height: 210px;
+
+        .addAddress {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            color: #565959;
+            flex-direction: column;
+
+            .icon-plus {
+                font-size: 48px;
+            }
+        }
+    }
+
+    .addres-item-border {
+        border-radius: 8px;
+        background: var(--clr-white);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+        display: flex;
+        flex-direction: column;
+
+        .addressInnerWrapper {
+            line-height: 22px;
+            flex: 0 0 170px;
+
+            .deffaultAddressSelected {
+                height: 40px;
+                padding: 10px 0 0 20px;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
+            }
+
+            .wrapper-address {
+                padding: 10px 0 0 20px;
+                height: calc(100% - 40px);
+            }
+        }
+
+        .addBtnWrapper {
+            padding: 20px;
+            margin-top: auto;
+
+            .edit-delete-btn {
+                display: flex;
+                column-gap: 10px;
+                align-items: center;
+
+                .btn {
+                    background: transparent !important;
+                    padding: 0;
+                    font-size: 12px;
+                    color: #007185;
+                    text-transform: capitalize;
+                    border: 0px;
+
+                    &.active,
+                    &:focus {
+                        outline: none;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*gift card*/
+
+.giftCardWrapper {
+    .giftListingFormWrapper {
+        display: flex;
+        gap: 15px 30px;
+
+        @include media-max(lg) {
+            flex-direction: column;
+        }
+
+        .giftList {
+            flex: 0 0 60%;
+            max-width: 60%;
+
+            @include media-max(lg) {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+            .addAmount {
+                .text {
+                    margin: 15px 0;
+                    font-weight: 600;
+                }
+
+                .giftChooseAmnt {
+                    margin-top: 0;
+                }
+            }
+
+            .useDetailForm {
+                .input-submit-action {
+                    display: flex;
+                    column-gap: 10px;
+
+                    #submit,
+                    #reset {
+                        width: 150px;
+                    }
+                }
+            }
+        }
+
+        .myGiftCard {
+            flex: 1 1 auto;
+            padding: 25px;
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            border-radius: 4px;
+            background: var(--clr-white);
+
+            .giftCouponHeader,
+            .validDateHeader {
+                column-gap: 5px;
+            }
+
+            .giftCoupon {
+                font-weight: var(--font-weight-bold);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.gift-terms .termsHeading {
+    margin: 15px 0;
+    font-size: 20px;
+    font-weight: var(--font-weight-bold);
+}
+
+.terms-list {
+    li {
+        line-height: var(--font-body-lineheight);
+
+        &::before {
+            content: "";
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--txt-color);
+            display: inline-block;
+            margin: 0 10px 0 0;
+        }
+    }
+}
+
+
+/*Refer and earn page */
+
+.rewardsReferralWrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    .input-submit-action {
+        .btn {
+            width: 100%;
+        }
+    }
+
+    .rewardDetails {
+        display: flex;
+        gap: 15px 30px;
+
+        @include media-max(xs) {
+            flex-direction: column;
+        }
+    }
+
+    .userReferral {
+        @include customisedCard();
+
+        .referRewardText {
+            margin: 0;
+            line-height: var(--font-body-lineheight);
+        }
+    }
+
+    .redeemRewardsPoint {
+        @include customisedCard();
+
+        .loyaltyPoints {
+            line-height: var(--font-body-lineheight);
+        }
+    }
+
+    .referralListing {
+        .custom-table-header {
+            .pointsHeader {
+                justify-content: center;
+            }
+
+            .statusHeader {
+                justify-content: flex-end;
+            }
+        }
+
+        .item-data {
+            .points {
+                justify-content: center;
+            }
+
+            .status {
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    .pointsTier {
+        .custom-table-header {
+            .tierPoints {
+                justify-content: flex-end;
+            }
+        }
+
+        .item-data {
+            .points {
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+
+#addAmountForm {
+    .form-section-action {
+        .label {
+            font-size: var(--font-body-size);
+            color: var(--txt-color);
+            line-height: var(--font-body-lineheight);
+            letter-spacing: 0.32px;
+            margin: 0 0 8px;
+            padding: 0;
+            text-transform: capitalize;
+            width: 100%;
+            font-weight: var(--font-weight-bold);
+        }
+
+        .quickAddAmount {
+            button.addAmountToWallet {
+                @include smallBtn();
+            }
+        }
+    }
+}
+
+.addMoneyToWallet {
+    .card {
+        .card-footer {
+            background: var(--clr-white);
+        }
+    }
+}
+
+.giftListingFormWrapper {
+    .giftList {
+        .card-body {
+            #addAmountForm {
+                .giftChooseAmnt {
+                    font-weight: 600;
+                }
+
+                .quickAddAmount {
+                    button {
+                        @include smallBtn();
+                    }
+
+                    .input-GiftAmount {
+                        display: flex;
+                        align-items: center;
+
+                        label.label {
+                            display: flex;
+                            align-items: center;
+                            padding: 0.555rem 0.75rem;
+                            margin-bottom: 0;
+                            font-size: 1rem;
+                            font-weight: 400;
+                            line-height: 1.5;
+                            color: #495057;
+                            text-align: center;
+                            white-space: nowrap;
+                            background-color: #e9ecef;
+                            border: 1px solid #ced4da;
+                            border-radius: 0.25rem;
+                            width: max-content;
+                            border-top-right-radius: 0;
+                            border-bottom-right-radius: 0;
+
+                            &:after {
+                                content: "₹";
+                                font-size: var(--font-body-size);
+                                color: var(--txt-color);
+                            }
+                        }
+
+                        input.form-control {
+                            border-top-left-radius: 0 !important;
+                            border-bottom-left-radius: 0 !important;
+                            height: 100%;
+                        }
+                    }
+                }
+
+                .enter {
+                    margin: 15px 0;
+                    font-weight: 600;
+                }
+
+                .input-submit-action {
+                    display: flex;
+                    column-gap: 10px;
+                    margin-top: 25px;
+
+                    button {
+                        width: 25%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.text-danger {
+    color: #dd0a32 !important;
+    text-transform: uppercase;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+}
+
+.changePasswordWrapper,
+.registerForm {
+    form {
+        .form-section {
+            button.btnSubmit {
+                max-width: 450px !important;
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+.HeaderContainerRQ {
+    // font-size: 1rem;
+    // font-weight: bold;
+    // letter-spacing: 0.54px;
+    // line-height: 17px;
+    // color: #fff !important;
+    // background-color: #F3F9FF;
+    // background-image: linear-gradient(to bottom, #3285b9, #2d81b6, #277db3, #2179b0, #1b75ad) !important;
+}

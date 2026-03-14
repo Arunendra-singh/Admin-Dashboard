@@ -1,0 +1,33 @@
+{
+  "name": "eslint-plugin-ewiz-custom",
+  "version": "0.0.1",
+  "private": false,
+  "license": "MIT",
+  "author": "Rohan Gaikwad",
+  "main": "index.js",
+  "scripts": {
+  },
+  "dependencies": {
+    "jsx-ast-utils": "2.4.1"
+  },
+  "devDependencies": {
+    "eslint": "8.38.0",
+    "prettier": "2.8.5",
+    "eslint-config-standard": "17.0.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-n": "15.6.1",
+    "eslint-plugin-promise": "6.1.1"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "*.js"
+  ],
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ]
+}

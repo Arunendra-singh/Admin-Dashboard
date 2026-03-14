@@ -1,0 +1,31 @@
+export interface ISelectedTemplate {
+    websiteguid: string;
+    languageguid: string;
+    templateguid: string;
+    templatename: string;
+    backcover: string;
+    backcoverguid: string;
+    frontcover: string;
+    frontcoverguid: string;
+    header: string;
+    headerguid: string;
+    footer: string;
+    footerguid: string;
+    frontinner: [];
+    backinner: [];
+    orientation: string;
+    type: string;
+    backgroundimage: string;
+    backgroundimageguid: string;
+    layoutguid: string;
+    layoutimage: string;
+    product: Int16Array;
+    flyerthumbimage: [];
+    flyerthumbimageguid: [];
+    layoutlist: [];
+    iscdmincreated: boolean;
+    pagesize: Int16Array;
+    pageno: Int8Array;
+    custbackgroundimage: [];
+    backbuttoncolor: string;
+}

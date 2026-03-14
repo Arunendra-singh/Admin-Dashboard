@@ -1,0 +1,109 @@
+{
+    "choices": [
+      {
+        "value": "ImprintColors",
+        "label": "ImprintColors"
+      },
+      {
+        "value": "ImprintLocations",
+        "label": "ImprintLocations"
+      },
+      {
+        "value": "ImprintMethods",
+        "label": "ImprintMethods"
+      },
+      {
+        "value": "ProductMaterials",
+        "label": "ProductMaterials"
+      },
+      {
+        "value": "Quantity",
+        "label": "Quantity"
+      },
+      {
+        "value": "KitComponent",
+        "label": "KitComponent"
+      },
+      {
+        "category": "VS Choices",
+        "options": [
+          {
+            "value": "Number_Of_Imprint_Locations",
+            "label": "Number_Of_Imprint_Locations"
+          },
+          {
+            "value": "Imprint_Location_1",
+            "label": "Imprint_Location_1"
+          },
+          {
+            "value": "Imprint_Location_2",
+            "label": "Imprint_Location_2"
+          },
+          {
+            "value": "Imprint_Location_3",
+            "label": "Imprint_Location_3"
+          },
+          {
+            "value": "Imprint_Location_4",
+            "label": "Imprint_Location_4"
+          },
+          {
+            "value": "Imprint_Location_5",
+            "label": "Imprint_Location_5"
+          },
+          {
+            "value": "Imprint_Location_6",
+            "label": "Imprint_Location_6"
+          },
+          {
+            "value": "Number_Of_Imprint_Colors",
+            "label": "Number_Of_Imprint_Colors"
+          },
+          {
+            "value": "Imprint_Color_1",
+            "label": "Imprint_Color_1"
+          },
+          {
+            "value": "Imprint_Color_2",
+            "label": "Imprint_Color_2"
+          },
+          {
+            "value": "Imprint_Color_3",
+            "label": "Imprint_Color_3"
+          },
+          {
+            "value": "Imprint_Color_4",
+            "label": "Imprint_Color_4"
+          },
+          {
+            "value": "Imprint_Color_5",
+            "label": "Imprint_Color_5"
+          },
+          {
+            "value": "Imprint_Color_6",
+            "label": "Imprint_Color_6"
+          },
+          {
+            "value": "Imprint_Color_7",
+            "label": "Imprint_Color_7"
+          },
+          {
+            "value": "Imprint_Color_8",
+            "label": "Imprint_Color_8"
+          },
+          {
+            "value": "Imprint_Type",
+            "label": "Imprint_Type"
+          },
+          {
+            "value": "Text",
+            "label": "Text"
+          },
+          {
+            "value": "Upload_Your_Logo_Art_File",
+            "label": "Upload_Your_Logo_Art_File"
+          }
+        ]
+      }
+    ]
+  }

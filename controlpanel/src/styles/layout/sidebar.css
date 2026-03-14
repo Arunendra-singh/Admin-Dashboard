@@ -1,0 +1,65 @@
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.sidebar-logo {
+    margin: -40%;
+    margin-bottom: 10px;
+    /* width: 30.45px;
+    height: 26.89px; */
+    /* background: #0E97E7; */
+    /* position: relative; */
+}
+
+
+.sidebar-icon {
+    margin: 10px 0;
+    position: relative;
+    background-blend-mode: lighten;
+}
+
+/* Example of one icon styling */
+.sidebar-icon1::before {
+    content: '';
+    width: 15.12px;
+    height: 15.81px;
+    /* background: #2E3B41; */
+    position: absolute;
+    left: 3.44px;
+    top: 2.75px;
+}
+
+/* Add the other icons' styles similarly */
+
+.sidebar-general {
+    color: #5F6F76;
+    font-size: 13px;
+    font-family: 'Euclid Circular B', sans-serif;
+    font-weight: 500;
+    margin-top: 505.79px;
+}
+
+
+.sidebar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, background-color 0.2s;
+    border-radius: 5px; /* Optional: To make the corners rounded */
+}
+
+.sidebar-icon img {
+    transition: transform 0.2s;
+}
+
+.sidebar-icon:hover {
+    background-color: #0E97E7;
+    transform: scale(2.0);
+}
+
+.sidebar-icon:hover img {
+    transform: scale(1.1);
+}
